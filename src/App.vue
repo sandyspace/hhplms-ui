@@ -1,8 +1,10 @@
 <template>
   <div id="app">
+    <!--
     <img src="./assets/logo.png">
     <router-link to="/count">Go to Count</router-link>
     <router-link to="/list">Go to List</router-link>
+    <router-link to="/swiper">Go to swiper</router-link>-->
     <router-view/>
   </div>
 </template>
@@ -14,6 +16,9 @@ export default {
 </script>
 
 <style>
+body{
+  margin: 0;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

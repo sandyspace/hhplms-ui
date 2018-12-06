@@ -1,5 +1,6 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+
 import Vue from 'vue'
 import App from './App'
 import router from './router'
@@ -8,10 +9,14 @@ import axios from 'axios'
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
 import Mint from 'mint-ui'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
+import 'animate.css/animate.min.css'
 import 'mint-ui/lib/style.css'
 
 // 引入全部mint-ui组件
 Vue.use(Mint)
+Vue.use(VueAwesomeSwiper /* { default global options } */)
 
 Vue.config.productionTip = false
 // 为了让所有的子组件可以使用axios, 将vue的原型属性$http设置为axios
