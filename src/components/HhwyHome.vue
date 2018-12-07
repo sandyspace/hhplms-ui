@@ -120,7 +120,7 @@ export default {
     width: 86%;
   }
   .swp1-t2{
-    margin-top: 21px;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     width: 293px;
