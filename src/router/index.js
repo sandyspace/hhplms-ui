@@ -12,12 +12,18 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: HhwyHome
+      component: HhwyHome,
+      meta: {
+        title: '海桦物业'
+      }
     },
     {
       path: '/hhwy',
       name: 'hhwyHome',
-      component: HhwyHome
+      component: HhwyHome,
+      meta: {
+        title: '海桦物业'
+      }
     },
     {
       path: '/count',
