@@ -52,7 +52,7 @@ export default {
         swp1: [false, false, false],
         swp2: [false, false]
       },
-      sliderArrow: true
+      sliderArrow: false
     }
   },
   mounted: function () {
@@ -82,32 +82,6 @@ export default {
 }
 </script>
 <style>
-  html,body {
-    height: 100%;
-  }
-  body {
-    background: #eee;
-  }
-  #app{
-    height: 100%;
-    margin-top: 0px;
-  }
-  #app > div{
-    height: 100%;
-  }
-  .container-arrow{
-    position: absolute;
-    bottom: 40px;
-    text-align: center;
-    left: 45%;
-    width: 27px;
-    height: 15px;
-    z-index: 1;
-  }
-  .container-arrow > img{
-    width: 100%;
-    height: 100%;
-  }
   .swiper-box {
     width: 100%;
     height: 100%;

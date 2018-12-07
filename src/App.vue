@@ -16,7 +16,11 @@ export default {
 </script>
 
 <style>
-body{
+html,body {
+  height: 100%;
+}
+body {
+  background: #eee;
   margin: 0;
 }
 #app {
@@ -25,6 +29,23 @@ body{
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  height: 100%;
+  margin-top: 0px;
+}
+#app > div{
+  height: 100%;
+}
+.container-arrow{
+  position: absolute;
+  bottom: 40px;
+  text-align: center;
+  left: 45%;
+  width: 27px;
+  height: 15px;
+  z-index: 1;
+}
+.container-arrow > img{
+  width: 100%;
+  height: 100%;
 }
 </style>
