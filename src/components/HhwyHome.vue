@@ -114,27 +114,28 @@ export default {
     -moz-background-size: 100% 100%;
   }
   .swp1-t0{
-    margin-top: 120px;
+    margin-top: 140px;
     margin-left: auto;
     margin-right: auto;
     width: 86%;
   }
   .swp1-t1{
-    margin-top: 20px;
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
     width: 86%;
   }
   .swp1-t2{
     position: relative;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
     width: 293px;
     height: 197px;
+    z-index: 100;
   }
   .swp1-t3{
-    margin-top: -260px;
+    margin-top: -240px;
     margin-left: auto;
     margin-right: auto;
     width: 293px;
@@ -142,7 +143,7 @@ export default {
   }
 
   .swp2-t0{
-    margin-top: 185px;
+    margin-top: 200px;
     margin-left: auto;
     margin-right: auto;
     width: 86%;
