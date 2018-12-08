@@ -38,7 +38,7 @@
 
 <script>
 export default {
-  name: 'PageHhwy',
+  name: 'HhwyHome',
   data () {
     return {
       /* swiper选项 */
