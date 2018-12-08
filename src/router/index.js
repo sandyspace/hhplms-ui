@@ -4,6 +4,7 @@ import Router from 'vue-router'
 // import List from '@/components/list'
 import HhwyHome from '@/components/HhwyHome'
 import C1818Home from '@/components/C1818Home'
+import CbgjHome from '@/components/CbgjHome'
 
 Vue.use(Router)
 
@@ -27,11 +28,19 @@ export default new Router({
       }
     },
     {
-      path: '/C1818',
+      path: '/1818',
       name: 'C1818Home',
       component: C1818Home,
       meta: {
         title: '1818中心'
+      }
+    },
+    {
+      path: '/cbgj',
+      name: 'CbgjHome',
+      component: CbgjHome,
+      meta: {
+        title: '船舶广场'
       }
     }
     /*,
