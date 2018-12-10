@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="index-wrap">
     <h3>页面索引</h3>
     <div><router-link to="/hhwy">海桦物业</router-link></div>
     <div><router-link to="/1818">1818中心</router-link></div>

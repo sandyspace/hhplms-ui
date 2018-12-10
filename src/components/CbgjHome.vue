@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="cbgj-wrap">
     <swiper :options="swiperOption" class="swiper-box" ref="swiperRef" @transitionEnd="onTransitionEnd">
       <swiper-slide class="swiper-item">
         <div class="swp-image" :style="{backgroundImage: 'url(./static/images/cbgj/1.jpg)'}">
@@ -104,12 +104,12 @@ export default {
 }
 </script>
 <style>
-  .swiper-box {
+  .cbgj-wrap .swiper-box {
     width: 100%;
     height: 100%;
     margin: 0 auto;
   }
-  .swiper-item {
+  .cbgj-wrap .swiper-item {
     height: 100%;
     text-align: center;
     font-size: 18px ;
@@ -128,74 +128,74 @@ export default {
     -webkit-align-items: center;
     align-items: center;
   }
-  .swiper-item .swp-image{
+  .cbgj-wrap .swiper-item .swp-image{
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     -moz-background-size: 100% 100%;
   }
-  .swp0-t0{
+  .cbgj-wrap .swp0-t0{
     margin-top: 140px;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
   }
-  .swp0-t1{
+  .cbgj-wrap .swp0-t1{
     margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
   }
-  .swp1-t0{
+  .cbgj-wrap .swp1-t0{
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     width: 96%;
   }
-  .swp2-t0{
+  .cbgj-wrap .swp2-t0{
     margin-top: 140px;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
   }
-  .swp2-t1{
+  .cbgj-wrap .swp2-t1{
     height: 100px;
     display: block;
     margin-left: 50px;
     margin-top: -20px;
   }
-  .contact-us-box{
+  .cbgj-wrap .contact-us-box{
     padding:20px;
     font-size: 0.3rem;
     color: #182166;
     padding-top: 130px;
     font-weight: 400;
   }
-  .contact-top {
+  .cbgj-wrap .contact-top {
     margin-bottom: 30px;
   }
-  .contact-top > div{
+  .cbgj-wrap .contact-top > div{
     display: inline-block;
   }
-  .contact-top a{
+  .cbgj-wrap .contact-top a{
     color: #182166 !important;
     padding-right: 15px;
     text-decoration: underline;
     font-weight: bold;
     font-size: 0.35rem;
   }
-  .contact-top a:nth-last-of-type(1){
+  .cbgj-wrap .contact-top a:nth-last-of-type(1){
     padding-right:0;
   }
-  .contact-bottom{
+  .cbgj-wrap .contact-bottom{
     margin-top: 20px;
   }
-  .contact-bottom > div{
+  .cbgj-wrap .contact-bottom > div{
     margin-bottom: 20px;
     display: flex;
   }
-  .contact-bottom > div > span:nth-child(2){
+  .cbgj-wrap .contact-bottom > div > span:nth-child(2){
     -webkit-flex: 1;
     flex: 1;
   }

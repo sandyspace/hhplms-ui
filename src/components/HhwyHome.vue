@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="hhwy-wrap">
     <swiper :options="swiperOption" class="swiper-box" ref="swiperRef" @transitionEnd="onTransitionEnd">
       <swiper-slide class="swiper-item">
         <div class="swp-image" :style="{backgroundImage: 'url(./static/images/hhwy/1.jpg)'}">
@@ -82,12 +82,12 @@ export default {
 }
 </script>
 <style scoped>
-  .swiper-box {
+  .hhwy-wrap .swiper-box {
     width: 100%;
     height: 100%;
     margin: 0 auto;
   }
-  .swiper-item {
+  .hhwy-wrap .swiper-item {
     height: 100%;
     text-align: center;
     font-size: 18px ;
@@ -106,26 +106,26 @@ export default {
     -webkit-align-items: center;
     align-items: center;
   }
-  .swiper-item .swp-image{
+  .hhwy-wrap .swiper-item .swp-image{
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     -moz-background-size: 100% 100%;
   }
-  .swp1-t0{
+  .hhwy-wrap .swp1-t0{
     margin-top: 140px;
     margin-left: auto;
     margin-right: auto;
     width: 86%;
   }
-  .swp1-t1{
+  .hhwy-wrap .swp1-t1{
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
     width: 86%;
   }
-  .swp1-t2{
+  .hhwy-wrap .swp1-t2{
     position: relative;
     margin-top: 30px;
     margin-left: auto;
@@ -134,22 +134,20 @@ export default {
     height: 197px;
     z-index: 100;
   }
-  .swp1-t3{
+  .hhwy-wrap .swp1-t3{
     margin-top: -240px;
     margin-left: auto;
     margin-right: auto;
     width: 293px;
     height: 197px;
   }
-
-  .swp2-t0{
+  .hhwy-wrap .swp2-t0{
     margin-top: 200px;
     margin-left: auto;
     margin-right: auto;
     width: 86%;
   }
-
-  .swp2-t1{
+  .hhwy-wrap  .swp2-t1{
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="xmgk-wrap">
     <swiper :options="swiperOption" class="swiper-box" ref="swiperRef" @transitionEnd="onTransitionEnd">
       <swiper-slide class="swiper-item">
         <div class="swp-image" :style="{backgroundImage: 'url(./static/images/xmgk/1.jpg)'}">
@@ -109,12 +109,12 @@ export default {
 }
 </script>
 <style scoped>
-  .swiper-box {
+  .xmgk-wrap .swiper-box {
     width: 100%;
     height: 100%;
     margin: 0 auto;
   }
-  .swiper-item {
+  .xmgk-wrap .swiper-item {
     height: 100%;
     text-align: center;
     font-size: 18px ;
@@ -133,57 +133,57 @@ export default {
     -webkit-align-items: center;
     align-items: center;
   }
-  .swiper-item .swp-image{
+  .xmgk-wrap .swiper-item .swp-image{
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     -moz-background-size: 100% 100%;
   }
-  .swp0-t0{
+  .xmgk-wrap .swp0-t0{
     margin-top: 120px;
     margin-left: auto;
     margin-right: auto;
     width: 86%;
   }
-  .swp0-t1{
+  .xmgk-wrap .swp0-t1{
     margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
   }
-  .swp1-t0{
+  .xmgk-wrap .swp1-t0{
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
   }
-  .swp1-t1{
+  .xmgk-wrap .swp1-t1{
     margin-top: 60px;
     margin-left: 0px;
     margin-right: auto;
     width: 80%;
   }
-  .swp1-t2{
+  .xmgk-wrap .swp1-t2{
     margin-top: -60px;
     margin-left: auto;
     margin-right: auto;
     height: 266px;
   }
-  .swp2-t0{
+  .xmgk-wrap .swp2-t0{
     margin-top: 320px;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
   }
-  .swp2-t1{
+  .xmgk-wrap .swp2-t1{
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
     height: 180px;
   }
-  .swp3-t0{
+  .xmgk-wrap .swp3-t0{
     position: relative;
     display: block;
     margin-top: 400px;
@@ -192,7 +192,7 @@ export default {
     height: 125px;
     z-index: 100;
   }
-  .swp3-t1{
+  .xmgk-wrap .swp3-t1{
     position: relative;
     margin-top: -80px;
     margin-left: 40px;
