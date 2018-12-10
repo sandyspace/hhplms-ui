@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 // import Count from '@/components/count'
 // import List from '@/components/list'
+import Index from '@/components/Index'
 import HhwyHome from '@/components/HhwyHome'
 import C1818Home from '@/components/C1818Home'
 import CbgjHome from '@/components/CbgjHome'
@@ -14,10 +15,10 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HhwyHome,
+      name: 'index',
+      component: Index,
       meta: {
-        title: '海桦物业'
+        title: '索引页'
       }
     },
     {

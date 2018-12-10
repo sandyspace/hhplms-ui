@@ -108,7 +108,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
   .swiper-box {
     width: 100%;
     height: 100%;
@@ -141,7 +141,7 @@ export default {
     -moz-background-size: 100% 100%;
   }
   .swp0-t0{
-    margin-top: 140px;
+    margin-top: 120px;
     margin-left: auto;
     margin-right: auto;
     width: 86%;
@@ -171,7 +171,7 @@ export default {
     height: 266px;
   }
   .swp2-t0{
-    margin-top: 380px;
+    margin-top: 320px;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
@@ -181,6 +181,7 @@ export default {
     margin-left: auto;
     margin-right: auto;
     width: 90%;
+    height: 180px;
   }
   .swp3-t0{
     position: relative;
