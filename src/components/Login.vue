@@ -5,7 +5,8 @@
         <h3>账号登录</h3>
         <div class="tu9-wrapper clear">
           <form action="" class="submitForm">
-            <div id="errorMsg" class="error-msg"></div>
+            <div class="error-msg">{{errorMessage}}</div>
+              <input type="hidden" name="placeholder">
               <div class="form_item">
                 <input type="text" name="name" placeholder="账号" maxlength="50">
               </div>
@@ -29,7 +30,9 @@
 export default {
   name: 'Login',
   data () {
-    return {}
+    return {
+      errorMessage: 'abc'
+    }
   },
   mounted: function () {},
   methods: {}
@@ -40,6 +43,26 @@ export default {
     height: 100%;
     background: url(/static/images/login_bj.png) no-repeat;
     background-size: 100% 100%;
+
+    .error-msg{
+      color: #fff;
+      font-size: 15px;
+      text-align: left;
+      padding-left: 32px;
+      width: 96%;
+      margin: 0px auto 20px;
+    }
+
+    input{
+      outline:none;
+      background-color: transparent !important;
+      box-shadow: 0 0 0px 1000px transparent inset !important;
+    }
+    input:-webkit-autofill {
+        box-shadow: 0 0 0px 1000px transparent inset !important;
+        border: 1px solid transparent !important;
+        background-color: transparent !important;
+    }
 
     .section{
       overflow: initial;
@@ -59,7 +82,6 @@ export default {
         font-size: 0.3rem;
         color: #fff;
         display: inline-block;
-        float: left;
         font-weight:400;
     }
     .form_item{
@@ -85,21 +107,15 @@ export default {
     .submitForm input, .submitForm textarea, .submitForm select {
         display: inline-block;
         width: 100%;
-        float: left;
         border: 1px #eee solid;
         padding-left: 5px;
         color: #fff;
         height:34px;
         line-height:34px;
     }
-    .submitForm textarea{
-      height:100px;
-      padding-top: 6px;
-    }
     .submitForm input{
       height: 40px;
-      width: 97%;
-      background: initial;
+      width: 96%;
       border-radius: 20px;
       color:#fff;
       padding-left:10px;
@@ -128,11 +144,12 @@ export default {
     }
     .balloon-container h3{
       text-align:center;
-      font-size:0.7rem;
+      font-size: 36px;
       font-weight:400;
       color:#fff;
       margin:0;
       margin-top: 90px;
+      display: inline-block;
     }
     .submit-btn{
       background: #5162a8;
