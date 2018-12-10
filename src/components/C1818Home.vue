@@ -106,109 +106,111 @@ export default {
   }
 }
 </script>
-<style>
-  .c1818-wrap .swiper-box {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-  }
-  .c1818-wrap .swiper-item {
-    height: 100%;
-    text-align: center;
-    font-size: 18px ;
-    background: #fff;
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-  }
-  .c1818-wrap .swiper-item .swp-image{
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
-  }
-  .c1818-wrap .swp0-t0{
-    margin-top: 140px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 86%;
-  }
-  .c1818-wrap .swp0-t1{
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-  }
-  .c1818-wrap .swp0-t2{
-    position: relative;
-    margin-top: -120px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 94%;
-    height: 320px;
-    z-index: 100;
-  }
-  .c1818-wrap .swp1-t0{
-    margin-top: 80px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-  }
-  .c1818-wrap .swp2-t0{
-    margin-top: 140px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-  }
-  .c1818-wrap .swp2-t1{
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 74%;
-  }
-  .c1818-wrap .contact-us-box{
-    padding:20px;
-    font-size: 0.3rem;
-    color: #182166;
-    padding-top: 130px;
-    font-weight: 400;
-  }
-  .c1818-wrap .contact-top {
-    margin-bottom: 30px;
-  }
-  .c1818-wrap .contact-top > div{
-    display: inline-block;
-  }
-  .c1818-wrap .contact-top a{
-    color: #182166 !important;
-    padding-right: 15px;
-    text-decoration: underline;
-    font-weight: bold;
-    font-size: 0.35rem;
-  }
-  .c1818-wrap .contact-top a:nth-last-of-type(1){
-    padding-right:0;
-  }
-  .c1818-wrap .contact-bottom{
-    margin-top: 20px;
-  }
-  .c1818-wrap .contact-bottom > div{
-    margin-bottom: 20px;
-    display: flex;
-  }
-  .c1818-wrap .contact-bottom > div > span:nth-child(2){
-    -webkit-flex: 1;
-    flex: 1;
+<style lang="less" scoped>
+  .c1818-wrap{
+    .swiper-box {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+    }
+    .swiper-item {
+      height: 100%;
+      text-align: center;
+      font-size: 18px ;
+      background: #fff;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    .swiper-item .swp-image{
+      height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      -moz-background-size: 100% 100%;
+    }
+    .swp0-t0{
+      margin-top: 140px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 86%;
+    }
+    .swp0-t1{
+      margin-top: 30px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+    }
+    .swp0-t2{
+      position: relative;
+      margin-top: -120px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 94%;
+      height: 320px;
+      z-index: 100;
+    }
+    .swp1-t0{
+      margin-top: 40px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+    }
+    .swp2-t0{
+      margin-top: 140px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+    }
+    .swp2-t1{
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 74%;
+    }
+    .contact-us-box{
+      padding:20px;
+      font-size: 0.3rem;
+      color: #182166;
+      padding-top: 130px;
+      font-weight: 400;
+    }
+    .contact-top {
+      margin-bottom: 30px;
+    }
+    .contact-top > div{
+      display: inline-block;
+    }
+    .contact-top a{
+      color: #182166 !important;
+      padding-right: 15px;
+      text-decoration: underline;
+      font-weight: bold;
+      font-size: 0.35rem;
+    }
+    .contact-top a:nth-last-of-type(1){
+      padding-right:0;
+    }
+    .contact-bottom{
+      margin-top: 20px;
+    }
+    .contact-bottom > div{
+      margin-bottom: 20px;
+      display: flex;
+    }
+    .contact-bottom > div > span:nth-child(2){
+      -webkit-flex: 1;
+      flex: 1;
+    }
   }
 </style>

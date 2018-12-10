@@ -20,6 +20,7 @@ html,body {
   height: 100%;
 }
 body {
+  height: 100%;
   background: #eee;
   margin: 0;
 }

@@ -7,6 +7,7 @@ import HhwyHome from '@/components/HhwyHome'
 import C1818Home from '@/components/C1818Home'
 import CbgjHome from '@/components/CbgjHome'
 import XmgkHome from '@/components/XmgkHome'
+import Login from '@/components/Login'
 
 Vue.use(Router)
 
@@ -42,13 +43,21 @@ export default new Router({
       name: 'CbgjHome',
       component: CbgjHome,
       meta: {
-        title: '船舶广场'
+        title: '船舶国际广场'
       }
     },
     {
       path: '/xmgk',
       name: 'XmgkHome',
       component: XmgkHome,
+      meta: {
+        title: '项目概况'
+      }
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login,
       meta: {
         title: '项目概况'
       }
