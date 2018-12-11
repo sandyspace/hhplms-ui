@@ -8,13 +8,13 @@
             <div class="error-msg">{{errorMessage}}</div>
               <input type="hidden" name="placeholder">
               <div class="form_item">
-                <input type="text" name="name" placeholder="账号" maxlength="50">
+                <input type="text" name="name" placeholder="账号" v-model="user.username" maxlength="50">
               </div>
               <div class="form_item">
-                <input type="password" name="userpw" placeholder="密码" maxlength="20">
+                <input type="password" name="userpw" placeholder="密码" v-model="user.password" maxlength="20">
               </div>
               <div class="form_item">
-                <span class="submit-btn" onclick="login();">提交</span>
+                <span class="submit-btn" @click="login">提交</span>
               </div>
               <div class="form_item">
                  <span class="zc_zh">如果还没有账号，点击<a href="register.html">立即注册</a></span>
@@ -27,15 +27,51 @@
 </template>
 
 <script>
+/* eslint-disable */ 
+
 export default {
   name: 'Login',
   data () {
     return {
-      errorMessage: 'abc'
+      user: {
+        userName: '',
+        password: ''
+      },
+      errorMessage: ''
     }
   },
   mounted: function () {},
-  methods: {}
+  methods: {
+    login: function () {
+      this.errorMessage = ''
+      var username = this.user.username
+      var password = this.user.password
+      if (username === '') {
+        this.errorMessage = '请输入用户名~'
+        return false
+      }
+      if (password === '') {
+        this.errorMessage = '请输入密码~'
+        return false
+      }
+      this.$http.post('/api/auth/account/login', {
+        'username': username,
+        'password': password
+      })
+      .then(response => {
+        console.log(response)
+        window.localStorage[this.tokenKey] = response.token;
+        //登录成功去个人中心
+        this.$router.push({path: '/1818'})
+      })
+      .catch(error => {
+        console.log(error.response)
+        if (!!error.response) {
+          this.errorMessage = error.response.data.message
+        }
+      })
+    }
+  }
 }
 </script>
 <style lang="less" scoped>

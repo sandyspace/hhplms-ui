@@ -19,8 +19,30 @@ Vue.use(Mint)
 Vue.use(VueAwesomeSwiper /* { default global options } */)
 
 Vue.config.productionTip = false
+
+let currentHost = window.location.host
+
+let currentRootUrl = 'https://whhczy.cn'
+if (currentHost === 'test.whhczy.cn') {
+  currentRootUrl = 'http://test.whhczy.cn'
+}
+
+// todo 暂时使用的是服务器
+currentRootUrl = 'http://test.whhczy.cn'
+
+console.log(currentRootUrl)
+Vue.prototype.G = {
+  baseURL: currentRootUrl,
+  tokenKey: 'access_token'
+}
 // 为了让所有的子组件可以使用axios, 将vue的原型属性$http设置为axios
-Vue.prototype.$http = axios
+Vue.prototype.$http = axios.create({
+  baseURL: currentRootUrl,
+  timeout: 5000,
+  headers: {
+    'Content-Type': 'application/json; charset=utf-8'
+  }
+})
 
 // 全局注册通用基础自定义组件
 // https://webpack.js.org/guides/dependency-management/#require-context
