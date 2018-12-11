@@ -60,9 +60,9 @@ export default {
       })
       .then(response => {
         console.log(response)
-        window.localStorage[this.tokenKey] = response.token;
+        window.localStorage[this.G.tokenKey] = response.data.token;
         //登录成功去个人中心
-        this.$router.push({path: '/1818'})
+        this.$router.push({path: '/user'})
       })
       .catch(error => {
         console.log(error.response)

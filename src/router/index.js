@@ -8,6 +8,7 @@ import C1818Home from '@/components/C1818Home'
 import CbgjHome from '@/components/CbgjHome'
 import XmgkHome from '@/components/XmgkHome'
 import Login from '@/components/Login'
+import UserHome from '@/components/UserHome'
 
 Vue.use(Router)
 
@@ -58,6 +59,14 @@ export default new Router({
       path: '/login',
       name: 'Login',
       component: Login,
+      meta: {
+        title: '项目概况'
+      }
+    },
+    {
+      path: '/user',
+      name: 'UserHome',
+      component: UserHome,
       meta: {
         title: '项目概况'
       }

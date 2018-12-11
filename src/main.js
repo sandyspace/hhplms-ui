@@ -33,7 +33,16 @@ currentRootUrl = 'http://test.whhczy.cn'
 console.log(currentRootUrl)
 Vue.prototype.G = {
   baseURL: currentRootUrl,
-  tokenKey: 'access_token'
+  tokenKey: 'access_token',
+  // 校验token过期，如果过期就跳转登录
+  validateTokenExpired: function ($vue, result) {
+    if (result) {
+      let errorCode = result.errorCode
+      if (errorCode === 11 || errorCode === 44) {
+        $vue.$router.push({path: '/login'})
+      }
+    }
+  }
 }
 // 为了让所有的子组件可以使用axios, 将vue的原型属性$http设置为axios
 Vue.prototype.$http = axios.create({
