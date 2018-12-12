@@ -42,6 +42,22 @@ Vue.prototype.G = {
         $vue.$router.push({path: '/login'})
       }
     }
+  },
+  // 校验手机号
+  isPoneAvailable: function (str) {
+    if (!/^[1][3,4,5,7,8][0-9]{9}$/.test(str)) {
+      return false
+    } else {
+      return true
+    }
+  },
+  // 校验邮箱地址
+  isEmailAvailable: function (str) {
+    if (!/^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/.test(str)) {
+      return false
+    } else {
+      return true
+    }
   }
 }
 // 为了让所有的子组件可以使用axios, 将vue的原型属性$http设置为axios

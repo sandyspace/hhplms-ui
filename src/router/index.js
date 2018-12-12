@@ -9,6 +9,7 @@ import CbgjHome from '@/components/CbgjHome'
 import XmgkHome from '@/components/XmgkHome'
 import Login from '@/components/Login'
 import UserHome from '@/components/UserHome'
+import Register from '@/components/Register'
 
 Vue.use(Router)
 
@@ -56,11 +57,19 @@ export default new Router({
       }
     },
     {
+      path: '/register',
+      name: 'Register',
+      component: Register,
+      meta: {
+        title: '账号注册'
+      }
+    },
+    {
       path: '/login',
       name: 'Login',
       component: Login,
       meta: {
-        title: '项目概况'
+        title: '账号登录'
       }
     },
     {
@@ -68,7 +77,7 @@ export default new Router({
       name: 'UserHome',
       component: UserHome,
       meta: {
-        title: '项目概况'
+        title: '个人中心'
       }
     }
     /*,
