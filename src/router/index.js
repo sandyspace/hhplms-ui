@@ -10,6 +10,8 @@ import XmgkHome from '@/components/XmgkHome'
 import Login from '@/components/Login'
 import UserHome from '@/components/UserHome'
 import Register from '@/components/Register'
+import ContactUs from '@/components/ContactUs'
+import Feedback from '@/components/Feedback'
 
 Vue.use(Router)
 
@@ -62,6 +64,22 @@ export default new Router({
       component: Register,
       meta: {
         title: '账号注册'
+      }
+    },
+    {
+      path: '/contactus',
+      name: 'ContactUs',
+      component: ContactUs,
+      meta: {
+        title: '联系我们'
+      }
+    },
+    {
+      path: '/feedback',
+      name: 'Feedback',
+      component: Feedback,
+      meta: {
+        title: '问题留言'
       }
     },
     {

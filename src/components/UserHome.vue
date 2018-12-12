@@ -70,15 +70,6 @@ export default {
           this.G.validateTokenExpired(this, error.response.data)
         }
       })
-  },
-  methods: {
-    toUploadCompany: function () {
-      
-      
-    },
-    toJoinCompany: function () {
-
-    }
   }
 }
 </script>
