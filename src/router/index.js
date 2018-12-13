@@ -12,6 +12,7 @@ import UserHome from '@/components/UserHome'
 import Register from '@/components/Register'
 import ContactUs from '@/components/ContactUs'
 import Feedback from '@/components/Feedback'
+import ActivityList from '@/components/ActivityList'
 
 Vue.use(Router)
 
@@ -80,6 +81,14 @@ export default new Router({
       component: Feedback,
       meta: {
         title: '问题留言'
+      }
+    },
+    {
+      path: '/activitys',
+      name: 'ActivityList',
+      component: ActivityList,
+      meta: {
+        title: '优惠信息'
       }
     },
     {

@@ -27,13 +27,17 @@ if (currentHost === 'test.whhczy.cn') {
   currentRootUrl = 'http://test.whhczy.cn'
 }
 
-// todo 暂时使用的是服务器
+// TODO 暂时使用的是服务器
 currentRootUrl = 'http://test.whhczy.cn'
+let currentImageUrl = currentRootUrl + '/upload'
 
-console.log(currentRootUrl)
 Vue.prototype.G = {
   baseURL: currentRootUrl,
   tokenKey: 'access_token',
+  // 校验token过期，如果过期就跳转登录
+  getImageURL: function (imgUrl) {
+    return currentImageUrl + '/' + imgUrl
+  },
   // 校验token过期，如果过期就跳转登录
   validateTokenExpired: function ($vue, result) {
     if (result) {

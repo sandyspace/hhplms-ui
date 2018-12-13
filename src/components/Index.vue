@@ -7,6 +7,7 @@
     <div><router-link to="/xmgk">项目概况</router-link></div>
     <div><router-link to="/contactus">联系我们</router-link></div>
     <div><router-link to="/feedback">问题反馈</router-link></div>
+    <div><router-link to="/activitys">优惠信息</router-link></div>
     <div><router-link to="/register">用户注册</router-link></div>
     <div><router-link to="/login">登录</router-link></div>
     <div><router-link to="/user">用户中心</router-link></div>

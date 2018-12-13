@@ -13,7 +13,7 @@
           </div>
           <div class="contact lxwm-bottom">
             <div class="">
-              <img src="static/images/lxwm_img_2.png" style="width:100%;"></div>
+              <img src="static/images/lxwm-img-2.png" style="width:100%;"></div>
             <div>
               <div>热线电话：</div>
               <a href="tel:027-87302928">027-87302928</a>
@@ -30,7 +30,9 @@
 
 export default {
   name: 'ContactUs',
-  data () {}
+  data () {
+    return {}
+  }
 }
 </script>
 <style lang="less" scoped>
