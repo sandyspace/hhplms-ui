@@ -13,7 +13,7 @@
           </div>
           <div class="form_item">
             <router-link to="/1818"><a href=""><span><img src="static/images/shanchuan.png"></span>上传企业信息</a></router-link>
-            <router-link to="/1818"><a href="" style="margin:0;"><span style="font-size: 18px;">+</span>加入企业</a></router-link>
+            <router-link to="/joinCompany"><a href="" style="margin:0;"><span style="font-size: 18px;">+</span>加入企业</a></router-link>
           </div>
         </div>
       </div>

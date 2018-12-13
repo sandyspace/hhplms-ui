@@ -13,6 +13,7 @@ import Register from '@/components/Register'
 import ContactUs from '@/components/ContactUs'
 import Feedback from '@/components/Feedback'
 import ActivityList from '@/components/ActivityList'
+import JoinCompany from '@/components/JoinCompany'
 
 Vue.use(Router)
 
@@ -105,6 +106,14 @@ export default new Router({
       component: UserHome,
       meta: {
         title: '个人中心'
+      }
+    },
+    {
+      path: '/joinCompany',
+      name: 'JoinCompany',
+      component: JoinCompany,
+      meta: {
+        title: '加入企业'
       }
     }
     /*,

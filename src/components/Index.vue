@@ -11,6 +11,7 @@
     <div><router-link to="/register">用户注册</router-link></div>
     <div><router-link to="/login">登录</router-link></div>
     <div><router-link to="/user">用户中心</router-link></div>
+    <div><router-link to="/joinCompany">加入企业</router-link></div>
   </div>
 </template>
 
