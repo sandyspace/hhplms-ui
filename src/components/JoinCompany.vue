@@ -63,7 +63,7 @@
 /* eslint-disable */ 
 
 export default {
-  name: 'JoinCompay',
+  name: 'JoinCompany',
   data () {
     return {
       companys: [{id:'', name: '请选择'}],

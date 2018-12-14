@@ -14,6 +14,7 @@ import ContactUs from '@/components/ContactUs'
 import Feedback from '@/components/Feedback'
 import ActivityList from '@/components/ActivityList'
 import JoinCompany from '@/components/JoinCompany'
+import UploadCompanyInfo from '@/components/UploadCompanyInfo'
 
 Vue.use(Router)
 
@@ -114,6 +115,14 @@ export default new Router({
       component: JoinCompany,
       meta: {
         title: '加入企业'
+      }
+    },
+    {
+      path: '/uploadCompanyInfo',
+      name: 'UploadCompanyInfo',
+      component: UploadCompanyInfo,
+      meta: {
+        title: '上传企业信息'
       }
     }
     /*,
