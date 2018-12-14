@@ -47,7 +47,7 @@ export default {
       var username = this.user.username
       var password = this.user.password
       if (username === '') {
-        this.errorMessage = '请输入用户名 ~'
+        this.errorMessage = '请输入用户名~'
         return false
       }
       if (password === '') {
