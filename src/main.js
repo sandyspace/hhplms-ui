@@ -28,7 +28,9 @@ if (currentHost === 'test.whhczy.cn') {
 }
 
 // TODO 暂时使用的是服务器
-currentRootUrl = 'http://test.whhczy.cn'
+if (process.env.NODE_ENV === 'development') {
+  currentRootUrl = 'http://test.whhczy.cn'
+}
 let currentImageUrl = currentRootUrl + '/upload'
 
 Vue.prototype.G = {
