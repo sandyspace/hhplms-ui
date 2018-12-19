@@ -36,7 +36,7 @@
                   <a href="tel:027-82337199">027-82337199</a>
                   <a href="tel:4001127199">4001127199</a>
               </div>
-              <div class="contact-center"><img src="static/images/cbgj/map.jpg" style="width:100%;"></div>
+              <div class="contact-center"><a href="https://map.baidu.com/mobile/webapp/search/search/qt=s&wd=%E6%AD%A6%E6%B1%89%E8%88%B9%E8%88%B6%E5%9B%BD%E9%99%85%E5%B9%BF%E5%9C%BA&c=218&searchFlag=bigBox&version=5&exptype=dep&src_from=webapp_all_bigbox&wd2=%E6%AD%A6%E6%B1%89%E5%B8%82%E6%B1%9F%E5%B2%B8%E5%8C%BA&sug_forward=87b42f39856244ad9d82ea2d&src=1/vt="><img src="static/images/cbgj/map.jpg" style="width:100%;"></a></div>
               <div class="contact-bottom">
                   <div><span>地址信息：</span><span>武汉船舶国际广场地处汉口京汉大道与江汉路步行街交汇处</span></div>
                   <div><span>交通方式：</span><span>轻轨一号线、地铁二号线、循礼门站</span></div>
@@ -174,6 +174,8 @@ export default {
   }
   .cbgj-wrap .contact-top {
     margin-bottom: 30px;
+    text-align: left;
+    font-size: 15px;
   }
   .cbgj-wrap .contact-top > div{
     display: inline-block;
@@ -183,7 +185,7 @@ export default {
     padding-right: 15px;
     text-decoration: underline;
     font-weight: bold;
-    font-size: 0.35rem;
+    font-size: 18px;
   }
   .cbgj-wrap .contact-top a:nth-last-of-type(1){
     padding-right:0;
@@ -192,11 +194,13 @@ export default {
     margin-top: 20px;
   }
   .cbgj-wrap .contact-bottom > div{
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     display: flex;
+    font-size: 16px;
   }
   .cbgj-wrap .contact-bottom > div > span:nth-child(2){
     -webkit-flex: 1;
     flex: 1;
+    text-align: left;
   }
 </style>

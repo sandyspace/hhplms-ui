@@ -122,7 +122,7 @@ export default {
     }
     .form_item{
         overflow: hidden;
-        margin: 0.5rem 0;
+        margin: 25px 0;
         padding: 0 28px;
     }
     .form_item:nth-of-type(1){
@@ -201,12 +201,14 @@ export default {
       height: 44px;
       line-height:44px;
       border-radius: 20px;
+      font-size: 14px;
     }
     .zc_zh{
       font-size: 0.3rem;
       text-align: center;
       display: block;
       color: #fff;
+      font-size: 14px;
     }
     .zc_zh a{
       padding-left:5px;

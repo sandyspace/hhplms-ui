@@ -156,7 +156,7 @@ export default {
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 90%;
   }
   .xmgk-wrap .swp1-t1{
     margin-top: 60px;
@@ -165,13 +165,13 @@ export default {
     width: 80%;
   }
   .xmgk-wrap .swp1-t2{
-    margin-top: -60px;
-    margin-left: auto;
+    margin-top: -80px;
+    margin-left: 25%;
     margin-right: auto;
-    height: 266px;
+    width: 80%;
   }
   .xmgk-wrap .swp2-t0{
-    margin-top: 320px;
+    margin-top: 340px;
     margin-left: auto;
     margin-right: auto;
     width: 90%;

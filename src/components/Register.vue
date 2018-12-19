@@ -245,12 +245,14 @@ export default {
       height: 44px;
       line-height:44px;
       border-radius: 20px;
+      font-size: 14px;
     }
     .zc_zh{
       font-size: 0.3rem;
       text-align: center;
       display: block;
       color: #fff;
+      font-size: 14px;
     }
     .zc_zh a{
       padding-left:5px;

@@ -39,7 +39,7 @@
                 <a href="tel:027-87302928">027-87302928</a>
                 <a href="tel:4001127199">4001127199</a>
             </div>
-            <div class="contact-center"><img src="static/images/1818/map.jpg" style="width:100%;"></div>
+            <div class="contact-center"><a href="https://map.baidu.com/mobile/webapp/search/search/qt=s&wd=%E8%88%B9%E8%88%B6%E5%9B%BD%E9%99%851818&c=218&searchFlag=bigBox&version=5&exptype=dep&src_from=webapp_all_bigbox&wd2=%E6%AD%A6%E6%B1%89%E5%B8%82%E6%AD%A6%E6%98%8C%E5%8C%BA&sug_forward=cee3584940e6bc388936eec3&src=1/vt="><img src="static/images/1818/map.jpg" style="width:100%;"></a></div>
             <div class="contact-bottom">
                 <div><span>地址信息：</span><span>武汉市武昌区中北路交汇处</span></div>
                 <div><span>交通方式：</span><span>轻轨四号线、楚河汉街站</span></div>
@@ -152,13 +152,12 @@ export default {
       width: 80%;
     }
     .swp0-t2{
-      position: relative;
-      margin-top: -120px;
-      margin-left: auto;
-      margin-right: auto;
+      position: absolute;
       width: 94%;
       height: 320px;
       z-index: 100;
+      left:3%;
+      bottom: 0;
     }
     .swp1-t0{
       margin-top: 40px;
@@ -187,6 +186,8 @@ export default {
     }
     .contact-top {
       margin-bottom: 30px;
+      font-size: 15px;
+      text-align: left;
     }
     .contact-top > div{
       display: inline-block;
@@ -196,7 +197,7 @@ export default {
       padding-right: 15px;
       text-decoration: underline;
       font-weight: bold;
-      font-size: 0.35rem;
+      font-size: 18px;
     }
     .contact-top a:nth-last-of-type(1){
       padding-right:0;
@@ -205,12 +206,14 @@ export default {
       margin-top: 20px;
     }
     .contact-bottom > div{
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       display: flex;
+      font-size: 16px;
     }
     .contact-bottom > div > span:nth-child(2){
       -webkit-flex: 1;
       flex: 1;
+      text-align: left;
     }
   }
 </style>

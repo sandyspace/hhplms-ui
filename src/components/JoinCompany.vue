@@ -174,11 +174,11 @@ export default {
   background: url(/static/images/form-bj.png) no-repeat;
   background-size: 100% 100%;
   text-align: left;
-
+  
   .balloon {
     opacity:1;
-    width:5.7rem;
-    margin:2.6rem auto;
+    width: 5.7rem;
+    margin: 2.6rem auto;
   }
   .section1 {
     width:6.81rem;
@@ -239,7 +239,7 @@ export default {
     height:100%;
   }
   .tu9-wrapper {
-    padding-top: 60px;
+    padding-top: 20px;
   }
   .logo-img img {
     width:100%;
@@ -255,10 +255,14 @@ export default {
   }
   .submitForm h4 {
     font-size: 15px;
-    margin:0 28px;
-    border-bottom:2px #5162a8 solid;
-    color:#5162a8;
-    display:inline-block;
+    margin: 0 28px;
+    border-left: 4px #5162a8 solid;
+    color: #5162a8;
+    display: inline-block;
+    padding-left: 10px;
+    height: 18px;
+    line-height: 18px;
+    margin-top: 20px;
   }
   .gender-box {
     height: 30px;

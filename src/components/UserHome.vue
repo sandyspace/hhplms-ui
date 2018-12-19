@@ -193,6 +193,7 @@ export default {
     margin-bottom: 36px;
     border-radius: 6px;
     width:220px;
+    font-size: 14px;
   }
   .form_item a span{
     display: inline-block;

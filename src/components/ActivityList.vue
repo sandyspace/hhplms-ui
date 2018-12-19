@@ -5,10 +5,10 @@
         <a v-for="(activity, index) in activitys" class="containerBox" :key="index" @click="showDetail(index)">
           <div class="leftBox">
             <h3>{{activity.title}}</h3>
+            <span>{{activity.formatDate}}</span>
             <p>{{activity.content}}</p>
             <span>{{activity.companyName}}</span>
-            <span>
-              <img src="static/images/time.png">{{activity.formatDate}}</span>
+
           </div>
           <div class="rightBox">
             <img :src="activity.fullImageUrl" alt="" width="100%">
@@ -86,7 +86,7 @@ export default {
 <style lang="less" scoped>
 .activitys-wrap{
   height: 100%;
-  background: url(/static/images/lxwm-bg.png) no-repeat;
+  background: url(/static/images/lxwm-bg-2.png) no-repeat;
   background-size: 100% 100%;
 
   .hdxq-list {
@@ -113,13 +113,11 @@ export default {
   .hdxq-list .containerBox {
     overflow:hidden;
     box-sizing:border-box;
-    margin:0 6px;
     margin-bottom:0px;
     display:block;
     padding-bottom:10px;
-    padding:16px 6px;
-    background:#fff;
-    border-bottom:1px #f0f0f0 solid;
+    padding:16px 12px;
+    border-bottom:1px #ddd solid;
   }
   .hdxq-list .containerBox:nth-last-of-type(1) {
     border:none;
@@ -139,6 +137,7 @@ export default {
   }
   .hdxq-list .containerBox .leftBox h3,.hdxq-list .containerBox .leftBox p,.hdxq-list .containerBox .leftBox span {
     margin-left:15px;
+    text-align: left;
   }
   .hdxq-list .leftBox h3 {
     font-size:15px;
@@ -150,7 +149,7 @@ export default {
   .hdxq-list .leftBox p {
     margin:0;
     font-size:12px;
-    margin-top:15px;
+    margin-top:5px;
     color:#666;
     height:34px;
     overflow:hidden;
@@ -158,16 +157,20 @@ export default {
   .hdxq-list .leftBox span {
     color:#999;
     display:inline-block;
-    margin-top:19px;
+    margin-top:5px;
     font-size:12px;
+    
   }
   .hdxq-list .leftBox span:nth-of-type(1) {
-    border:1px #6764a7 solid;
-    border-radius:3px;
-    color:#6764a7;
-    padding:2px 12px;
-    margin-top:17px;
-    float:right;
+   margin: 0;
+    padding-top: 7px;
+    width: 100%;
+    display: block;
+    padding-left: 15px;
+  }
+  .hdxq-list .leftBox span:nth-of-type(2){
+    color: #6764a7;
+    display: block;
   }
   .hdxq-list .leftBox span img {
     width:14px;
@@ -207,10 +210,11 @@ export default {
     color:rgba(0,0,0,0.63);
   }
   .hdxq-box .containerCon {
-    font-size:0.25rem;
+    font-size:14px;
     text-indent:2em;
     width:90%;
     margin:15px auto;
+    text-align: left;
   }
   .hdxq-box .containerBox {
     overflow:hidden;
@@ -232,7 +236,7 @@ export default {
     padding-top:2rem;
   }
   .hdxq-box .title {
-    font-size:0.4rem;
+    font-size:20px;
     text-align:center;
     font-weight:bold;
     padding-top:40px;
@@ -293,8 +297,6 @@ export default {
     top:1px;
   }
   .qy-box {
-    border:1px #6764a7 solid;
-    border-radius:3px;
     color:#6764a7 !important;
     padding:2px 12px;
   }
@@ -303,10 +305,10 @@ export default {
     padding-top:2px;
   }
   .dh-box {
-    font-size:0.25rem;
+    font-size:14px;
     width:90%;
     margin:40px auto;
-    color:#6764a7;
+    color:#666;
     border-top:1px #eee solid;
     padding-top:15px;
     text-align:right;
