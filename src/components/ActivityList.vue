@@ -86,7 +86,7 @@ export default {
 <style lang="less" scoped>
 .activitys-wrap{
   height: 100%;
-  background: url(/static/images/lxwm-bg-2.png) no-repeat;
+  background: url(../../static/images/lxwm-bg-2.png) no-repeat;
   background-size: 100% 100%;
 
   .hdxq-list {

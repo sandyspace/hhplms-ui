@@ -40,7 +40,7 @@ export default {
   height: 100%;
   background: #fff;
   .section-box-5{
-    background: url(/static/images/lxwm-bg.png) no-repeat;
+    background: url(../../static/images/lxwm-bg.png) no-repeat;
     background-size: 100% 100%;
   }
   .section{

@@ -168,7 +168,7 @@ export default {
     margin-top: -80px;
     margin-left: 20%;
     margin-right: auto;
-    width: 80%;
+    width: 75%;
   }
   .xmgk-wrap .swp2-t0{
     margin-top: 340px;

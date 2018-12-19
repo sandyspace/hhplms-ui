@@ -205,7 +205,7 @@ export default {
 <style lang="less" scoped>
 .joincompany-wrap{
   height: auto !important;
-  background: url(/static/images/form-bj.png) no-repeat;
+  background: url(../../static/images/form-bj.png) no-repeat;
   background-size: 100% 100%;
   text-align: left;
 
@@ -312,6 +312,8 @@ export default {
     float:left;
     font-size:0.26rem;
     color:#666;
+    position: relative;
+    top: 2px;
   }
   .gender-box input {
     width:initial;
