@@ -157,7 +157,7 @@ export default {
       height: 320px;
       z-index: 100;
       left:3%;
-      bottom: 0;
+      bottom: 12px;
     }
     .swp1-t0{
       margin-top: 40px;
