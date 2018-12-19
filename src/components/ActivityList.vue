@@ -113,14 +113,10 @@ export default {
   .hdxq-list .containerBox {
     overflow:hidden;
     box-sizing:border-box;
-    margin-bottom:0px;
     display:block;
-    padding-bottom:10px;
-    padding:16px 12px;
+    margin:16px 12px;
     border-bottom:1px #ddd solid;
-  }
-  .hdxq-list .containerBox:nth-last-of-type(1) {
-    border:none;
+    padding-bottom: 16px;
   }
   .hdxq-list .containerBox .leftBox,.containerBox .rightBox {
     color:#fff;

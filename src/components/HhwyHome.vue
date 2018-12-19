@@ -114,13 +114,13 @@ export default {
     -moz-background-size: 100% 100%;
   }
   .hhwy-wrap .swp1-t0{
-    margin-top: 140px;
+    margin-top: 130px;
     margin-left: auto;
     margin-right: auto;
     width: 86%;
   }
   .hhwy-wrap .swp1-t1{
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     width: 86%;

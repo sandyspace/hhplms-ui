@@ -38,9 +38,11 @@ export default {
 <style lang="less" scoped>
 .contactus-wrap{
   height: 100%;
-  background: url(/static/images/lxwm-bg.png) no-repeat;
-  background-size: 100% 100%;
-
+  background: #fff;
+  .section-box-5{
+    background: url(/static/images/lxwm-bg.png) no-repeat;
+    background-size: 100% 100%;
+  }
   .section{
     overflow: initial;
   }
@@ -48,6 +50,7 @@ export default {
       padding:30px 20px;
       font-size: 0.3rem;
       color: #182166;
+
   }
   .contact{
       margin-bottom: 30px;

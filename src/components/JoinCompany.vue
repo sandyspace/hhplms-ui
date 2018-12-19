@@ -42,12 +42,12 @@
               </div>
             </div>
             <div class="form_item company-owner">
-              <label for="">手机：</label>
-              <div>{{joinPersonPhone}}</div>
+              <label for="" style="width: initial;">手机：</label>
+              <div class="gender-box">{{joinPersonPhone}}</div>
             </div>
             <div class="form_item company-owner">
-              <label for="">邮箱：</label>
-              <div>{{joinPersonEmail}}</div>
+              <label for="" style="width: initial;">邮箱：</label>
+              <div class="gender-box">{{joinPersonEmail}}</div>
             </div>
             <div id="errorMsg" class="error-msg">{{errorMessage}}</div>
             <div class="form_item" style="margin:0;margin-top: 40px;display: flex;margin-bottom: 40px;">

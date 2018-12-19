@@ -64,12 +64,12 @@
                 </div>
               </div>
               <div class="form_item company-owner">
-                <label for="">业主手机：</label>
-                <div id="companyOwnerPhone">{{companyOwnerPhone}}</div>
+                <label for="" style="width: initial;">业主手机：</label>
+                <div id="companyOwnerPhone" class="gender-box">{{companyOwnerPhone}}</div>
               </div>
               <div class="form_item company-owner">
-                <label for="">业主邮箱：</label>
-                <div id="companyOwnerEmail">{{companyOwnerEmail}}</div>
+                <label for="" style="width: initial;">业主邮箱：</label>
+                <div id="companyOwnerEmail" class="gender-box">{{companyOwnerEmail}}</div>
               </div>
               <div id="errorMsg" class="error-msg">{{errorMessage}}</div>
               <div class="form_item" style="margin:0;margin-top: 40px;display: flex;margin-bottom: 40px;">
