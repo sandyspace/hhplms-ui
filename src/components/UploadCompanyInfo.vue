@@ -102,7 +102,7 @@ export default {
       companyOwnerEmail: '',
       accessToken: null,
       errorMessage: '',
-      success: false
+      success: true
     }
   },
   mounted: function () {
@@ -204,7 +204,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .joincompany-wrap{
-  height: auto !important;
+  height: 100% !important;
   background: url(../../static/images/form-bj.png) no-repeat;
   background-size: 100% 100%;
   text-align: left;
@@ -335,13 +335,12 @@ export default {
     line-height: 22px;
   }
   .tips-box {
-    font-size: 13px;
+    font-size: 14px;
     text-align: center;
     padding: 0 40px;
     padding-top:100px;
   }
   .tips-box a {
-    padding-left:10px;
     color:#5162a8;
   }
   .tips-box span > div img {
