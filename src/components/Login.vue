@@ -17,7 +17,7 @@
                 <span class="submit-btn" @click="login">提交</span>
               </div>
               <div class="form_item">
-                 <span class="zc_zh">如果还没有账号，点击<a href="register.html">立即注册</a></span>
+                 <span class="zc_zh">如果还没有账号，点击<router-link to="/register"><a>立即注册</a></router-link></span>
               </div>
           </form>
         </div>
