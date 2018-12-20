@@ -173,7 +173,7 @@ export default {
         this.errorMessage = '请输入业主姓名'
         return false;
       }
-      this.$http.patch('/api/ana/account/joinCompany', {
+      this.$http.post('/api/ana/account/companyInfo', {
         	  'address': address,
             'code': '',
             'contactPhone': contactMobile,
