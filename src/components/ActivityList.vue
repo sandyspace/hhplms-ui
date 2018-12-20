@@ -270,7 +270,7 @@ export default {
     margin:20px auto;
   }
   .information-box > div {
-    font-size:0.25rem;
+    font-size:14px;
     float:left;
     color:#999;
   }

@@ -7,7 +7,7 @@
             <div class="head-portrait"><span><img src="static/images/touxiang.jpg"></span></div>
             <h3><span>{{user.username}}</span></h3>
             <div class="data-box">
-                <span><img src="static/images/telephone.png">{{user.mobile}}</span>
+                <span><em style="color:#fff; font-style:normal;"><img src="static/images/telephone.png">{{user.mobile}}</em></span>
                 <span><img src="static/images/mailbox.png">{{user.email}}</span>
             </div>
           </div>

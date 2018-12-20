@@ -114,35 +114,35 @@ export default {
     -moz-background-size: 100% 100%;
   }
   .hhwy-wrap .swp1-t0{
-    margin-top: 130px;
+    margin-top: 105px;
     margin-left: auto;
     margin-right: auto;
     width: 86%;
   }
   .hhwy-wrap .swp1-t1{
-    margin-top: 20px;
+    margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
     width: 86%;
   }
   .hhwy-wrap .swp1-t2{
     position: relative;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 293px;
-    height: 197px;
+    width: 300px;
+    height: 170px;
     z-index: 100;
   }
   .hhwy-wrap .swp1-t3{
     margin-top: -240px;
     margin-left: auto;
     margin-right: auto;
-    width: 293px;
-    height: 197px;
+    width: 300px;
+    height: 170px;
   }
   .hhwy-wrap .swp2-t0{
-    margin-top: 200px;
+    margin-top: 175px;
     margin-left: auto;
     margin-right: auto;
     width: 86%;

@@ -140,7 +140,7 @@ export default {
       -moz-background-size: 100% 100%;
     }
     .swp0-t0{
-      margin-top: 140px;
+      margin-top: 120px;
       margin-left: auto;
       margin-right: auto;
       width: 86%;
@@ -154,7 +154,7 @@ export default {
     .swp0-t2{
       position: absolute;
       width: 94%;
-      height: 320px;
+      height: 280px;
       z-index: 100;
       left:3%;
       bottom: 11px;
@@ -166,7 +166,7 @@ export default {
       width: 90%;
     }
     .swp2-t0{
-      margin-top: 140px;
+      margin-top: 120px;
       margin-left: auto;
       margin-right: auto;
       width: 80%;
@@ -175,7 +175,9 @@ export default {
       margin-top: 20px;
       margin-left: auto;
       margin-right: auto;
-      width: 74%;
+      width: 60%;
+      position: relative;
+      left: -30px;
     }
     .contact-us-box{
       padding:20px;

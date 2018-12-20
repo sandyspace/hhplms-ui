@@ -228,7 +228,7 @@ export default {
       font-weight:400;
       color:#fff;
       margin:0;
-      margin-top: 90px;
+      margin-top: 50px;
       display: inline-block;
     }
     .submit-btn{

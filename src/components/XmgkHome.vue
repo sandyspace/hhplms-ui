@@ -26,22 +26,26 @@
       </swiper-slide>
       <swiper-slide class="swiper-item">
         <div class="swp-image" :style="{backgroundImage: 'url(./static/images/xmgk/3.jpg)'}">
+          <div class="swp-box-bottom wap-0">
           <transition name="swp2-t0" enter-active-class="zoomIn">
             <img v-if="swp.swp2[0]" src="static/images/xmgk/swp2-t0.png" class="swp2-t0 animated">
           </transition>
           <transition name="swp2-t1" enter-active-class="rollIn">
             <img v-if="swp.swp2[1]" src="static/images/xmgk/swp2-t1.png" class="swp2-t1 animated">
           </transition>
+          </div>
         </div>
       </swiper-slide>
       <swiper-slide class="swiper-item">
         <div class="swp-image" :style="{backgroundImage: 'url(./static/images/xmgk/4.jpg)'}">
-          <transition name="swp3-t0" enter-active-class="fadeInLeft">
-            <img v-if="swp.swp3[0]" src="static/images/xmgk/swp3-t0.png" class="swp3-t0 animated">
-          </transition>
-          <transition name="swp3-t1" enter-active-class="fadeInRight">
-            <img v-if="swp.swp3[1]" src="static/images/xmgk/swp3-t1.png" class="swp3-t1 animated">
-          </transition>
+          <div class="swp-box-bottom">
+            <transition name="swp3-t0" enter-active-class="fadeInLeft">
+              <img v-if="swp.swp3[0]" src="static/images/xmgk/swp3-t0.png" class="swp3-t0 animated">
+            </transition>
+            <transition name="swp3-t1" enter-active-class="fadeInRight">
+              <img v-if="swp.swp3[1]" src="static/images/xmgk/swp3-t1.png" class="swp3-t1 animated">
+            </transition>
+          </div>
         </div>
       </swiper-slide>
     </swiper>
@@ -141,13 +145,13 @@ export default {
     -moz-background-size: 100% 100%;
   }
   .xmgk-wrap .swp0-t0{
-    margin-top: 120px;
+    margin-top: 105px;
     margin-left: auto;
     margin-right: auto;
-    width: 86%;
+    width: 70%;
   }
   .xmgk-wrap .swp0-t1{
-    margin-top: 40px;
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
@@ -159,19 +163,18 @@ export default {
     width: 90%;
   }
   .xmgk-wrap .swp1-t1{
-    margin-top: 60px;
+    margin-top: 40px;
     margin-left: 0px;
     margin-right: auto;
     width: 80%;
   }
   .xmgk-wrap .swp1-t2{
     margin-top: -80px;
-    margin-left: 20%;
+    margin-left: 25%;
     margin-right: auto;
-    width: 75%;
+    width: 70%;
   }
   .xmgk-wrap .swp2-t0{
-    margin-top: 340px;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
@@ -186,7 +189,6 @@ export default {
   .xmgk-wrap .swp3-t0{
     position: relative;
     display: block;
-    margin-top: 400px;
     margin-left: 40px;
     width: 190px;
     height: 125px;
@@ -195,8 +197,12 @@ export default {
   .xmgk-wrap .swp3-t1{
     position: relative;
     margin-top: -80px;
-    margin-left: 40px;
+    margin-left: 80px;
     width: 261px;
     z-index: 99;
+  }
+  .swp-box-bottom{
+    position:absolute;
+    bottom:20px;
   }
 </style>
