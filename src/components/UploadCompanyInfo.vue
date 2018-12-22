@@ -102,7 +102,7 @@ export default {
       companyOwnerEmail: '',
       accessToken: null,
       errorMessage: '',
-      success: true
+      success: false
     }
   },
   mounted: function () {

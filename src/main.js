@@ -45,6 +45,7 @@ Vue.prototype.G = {
     if (result) {
       let errorCode = result.errorCode
       if (errorCode === 11 || errorCode === 44) {
+        window.localStorage.removeItem($vue.G.tokenKey)
         $vue.$router.push({path: '/login'})
       }
     }

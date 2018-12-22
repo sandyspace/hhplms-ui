@@ -14,6 +14,8 @@
           <div v-if="user.subType != 'company'" class="form_item">
             <router-link to="/uploadCompanyInfo"><a href=""><span><img src="static/images/shanchuan.png"></span>上传企业信息</a></router-link>
             <router-link to="/joinCompany"><a href="" style="margin:0;"><span style="font-size: 18px;">+</span>加入企业</a></router-link>
+            <a @click="logout">注销</a>
+            <a :href="this.G.baseURL + '/admin'">企业管理</a>
           </div>
         </div>
       </div>
@@ -42,6 +44,7 @@ export default {
     // 判断用户是否登录，如果未登录去登录页面
     let access_token = window.localStorage[this.G.tokenKey];
     if(access_token == null || access_token == '' || access_token == undefined) {
+      console.log('user push /login --------------------------')
       this.$router.push({path: '/login'})
       return false
     }
@@ -70,6 +73,15 @@ export default {
           this.G.validateTokenExpired(this, error.response.data)
         }
       })
+  },
+  methods: {
+    logout: function () {
+      //清理本地token缓存
+      console.log('logout ------------------')
+      window.localStorage.removeItem(this.G.tokenKey)
+      //刷新页面，根据正常逻辑返回登录页面
+      location.reload()
+    }
   }
 }
 </script>

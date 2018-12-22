@@ -40,7 +40,15 @@ export default {
       errorMessage: ''
     }
   },
-  mounted: function () {},
+  mounted: function () {
+    // 判断用户是否登录，如果已登录直接去用户中心
+    let access_token = window.localStorage[this.G.tokenKey]
+    if(access_token != null && access_token != '' && access_token != undefined) {
+      console.log('login push to [/user]')
+      this.$router.push({path: '/user'})
+      return false
+    }
+  },
   methods: {
     login: function () {
       this.errorMessage = ''
