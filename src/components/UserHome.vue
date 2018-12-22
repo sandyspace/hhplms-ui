@@ -11,9 +11,11 @@
                 <span><img src="static/images/mailbox.png">{{user.email}}</span>
             </div>
           </div>
-          <div v-if="user.subType != 'company'" class="form_item">
-            <router-link to="/uploadCompanyInfo"><a href=""><span><img src="static/images/shanchuan.png"></span>上传企业信息</a></router-link>
-            <router-link to="/joinCompany"><a href="" style="margin:0;"><span style="font-size: 18px;">+</span>加入企业</a></router-link>
+          <div class="form_item">
+            <div v-if="showUpload">
+              <router-link to="/uploadCompanyInfo"><a href=""><span><img src="static/images/shanchuan.png"></span>上传企业信息</a></router-link>
+              <router-link to="/joinCompany"><a href="" style="margin:0;"><span style="font-size: 18px;">+</span>加入企业</a></router-link>
+            </div>
             <a @click="logout">注销</a>
             <a :href="this.G.baseURL + '/admin'">企业管理</a>
           </div>
@@ -31,11 +33,12 @@ export default {
   data () {
     return {
       user: {
-        mobile: '',
-        email: '',
+        mobile: ' ',
+        email: ' ',
         realName: '',
         nickName: ''
       },
+      showUpload: false,
       accessToken: null,
       errorMessage: ''
     }
@@ -66,6 +69,10 @@ export default {
           }
         }
         this.user.username = username
+        if(user.subType != 'company'){
+          this.showUpload = true
+        }
+
       })
       .catch(error => {
         if(!!error.response){
