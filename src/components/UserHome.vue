@@ -71,6 +71,8 @@ export default {
         this.user.username = username
         if(user.subType != 'company'){
           this.showUpload = true
+        }else{
+          this.showUpload = false
         }
 
       })
