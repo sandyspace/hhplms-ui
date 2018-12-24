@@ -69,12 +69,11 @@ export default {
           }
         }
         this.user.username = username
-        if(user.subType != 'company'){
+        if(this.user.subType != 'company'){
           this.showUpload = true
         }else{
           this.showUpload = false
         }
-
       })
       .catch(error => {
         if(!!error.response){
