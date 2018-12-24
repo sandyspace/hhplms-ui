@@ -199,7 +199,7 @@ export default {
     font-size: 0.3rem;
     text-align: center;
     color: #fff;
-    margin-top: 60px;
+    margin-top: 40px;
   }
   .form_item a{
     color:#fff;
@@ -210,7 +210,7 @@ export default {
     height: 44px;
     line-height: 44px;
     text-decoration:none;
-    margin-bottom: 36px;
+    margin-bottom: 20px;
     border-radius: 6px;
     width:220px;
     font-size: 14px;
@@ -231,8 +231,8 @@ export default {
     display: inline-block;
     border-radius: 50%;
     background: #ccc;
-      margin-bottom: 5px;
-    margin-top: 90px;
+    margin-bottom: 5px;
+    margin-top: 70px;
     overflow: hidden;
     background:#fff;
   }
