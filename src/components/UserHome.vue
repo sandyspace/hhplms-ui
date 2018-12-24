@@ -7,7 +7,7 @@
             <div class="head-portrait"><span><img src="static/images/touxiang.jpg"></span></div>
             <h3><span>{{user.username}}</span></h3>
             <div class="data-box">
-                <span><em style="color:#fff; font-style:normal;"><img src="static/images/telephone.png">{{user.mobile}}</em></span>
+                <span><img src="static/images/telephone.png"><em style="color:#fff; font-style:normal;">{{user.mobile}}</em></span>
                 <span><img src="static/images/mailbox.png">{{user.email}}</span>
             </div>
           </div>
@@ -101,6 +101,9 @@ export default {
 
   .section{
     overflow: initial;
+  }
+  a{
+    color: #fff !important;
   }
   .balloon {
       opacity: 1;

@@ -5,7 +5,7 @@
         <div class="lxwm-box">
           <div class="contact">
             <div class="">
-              <a href="https://map.baidu.com/mobile/webapp/search/search/qt=s&wd=%E6%AD%A6%E6%B1%89%E8%88%B9%E8%88%B6%E5%9B%BD%E9%99%85%E5%B9%BF%E5%9C%BA&c=218&searchFlag=bigBox&version=5&exptype=dep&src_from=webapp_all_bigbox&wd2=%E6%AD%A6%E6%B1%89%E5%B8%82%E6%B1%9F%E5%B2%B8%E5%8C%BA&sug_forward=87b42f39856244ad9d82ea2d&src=1/vt="><img src="static/images/lxwm-img-1.png" style="width:100%;"></a></div>
+              <a href="https://m.amap.com/search/mapview/poiid=B0FFIJP5W9&keywords=%E8%88%B9%E8%88%B6%E5%9B%BD%E9%99%85%E5%B9%BF%E5%9C%BA"><img src="static/images/lxwm-img-1.png" style="width:100%;"></a></div>
             <div>
               <div>热线电话：</div>
               <a href="tel:027-87302928">027-87302928</a>
@@ -13,7 +13,7 @@
           </div>
           <div class="contact lxwm-bottom">
             <div class="">
-              <a href="https://map.baidu.com/mobile/webapp/search/search/qt=s&wd=%E8%88%B9%E8%88%B6%E5%9B%BD%E9%99%851818&c=218&searchFlag=bigBox&version=5&exptype=dep&src_from=webapp_all_bigbox&wd2=%E6%AD%A6%E6%B1%89%E5%B8%82%E6%AD%A6%E6%98%8C%E5%8C%BA&sug_forward=cee3584940e6bc388936eec3&src=1/vt="><img src="static/images/lxwm-img-2.png" style="width:100%;"></a></div>
+              <a href="https://m.amap.com/search/mapview/keywords=%E8%88%B9%E8%88%B6%E5%9B%BD%E9%99%851818&city=420106&poiid=B0FFGWI3EZ"><img src="static/images/lxwm-img-2.png" style="width:100%;"></a></div>
             <div>
               <div>热线电话：</div>
               <a href="tel:027-87302928">027-87302928</a>
