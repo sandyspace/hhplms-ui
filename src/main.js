@@ -22,16 +22,16 @@ Vue.config.productionTip = false
 
 let currentHost = window.location.host
 
-let currentRootUrl = 'https://whhczy.cn'
-if (currentHost === 'test.whhczy.cn') {
-  currentRootUrl = 'http://test.whhczy.cn'
+let currentRootUrl = 'https://iotecloud.com'
+if (currentHost === 'test.iotecloud.com') {
+  currentRootUrl = 'http://test.iotecloud.com'
 }
 
 // TODO 暂时使用的是服务器
 if (process.env.NODE_ENV === 'development') {
-  currentRootUrl = 'http://test.whhczy.cn'
+  currentRootUrl = 'http://test.iotecloud.com'
 }
-let currentImageUrl = currentRootUrl + '/upload'
+let currentImageUrl = currentRootUrl + '/client/cbgj/upload'
 
 Vue.prototype.G = {
   baseURL: currentRootUrl,

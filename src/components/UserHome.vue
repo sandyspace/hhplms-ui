@@ -17,7 +17,7 @@
               <router-link to="/joinCompany"><a href="" style="margin:0;"><span style="font-size: 18px;">+</span>加入企业</a></router-link>
             </div>
             <a @click="logout">注销</a>
-            <a :href="this.G.baseURL + '/admin'">企业管理</a>
+            <a :href="this.G.baseURL + '/client/cbgj/admin'">企业管理</a>
           </div>
         </div>
       </div>
@@ -26,7 +26,7 @@
 </template>
 
 <script>
-/* eslint-disable */ 
+/* eslint-disable */
 
 export default {
   name: 'UserHome',
@@ -121,7 +121,7 @@ export default {
   }
   .form_item:nth-of-type(1){
     margin-top:0;
-  } 
+  }
   .form_item .button-btn-box{
     background: #5162a8;
     color: #fff;
@@ -163,7 +163,7 @@ export default {
     padding-left: 2px;
   }
   .balloon-container{
-    height:100%; 
+    height:100%;
   }
   .tu9-wrapper{
     position: initial;
@@ -246,7 +246,7 @@ export default {
   }
   .information > .head-portrait span{
     display: block;
-    padding: 3px;     
+    padding: 3px;
   }
   .information > h3{
     margin: 0;
