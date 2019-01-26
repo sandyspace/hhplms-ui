@@ -28,7 +28,7 @@
         </div>
       </swiper-slide>
       <swiper-slide class="swiper-item">
-        <div class="swp-image" :style="{backgroundImage: 'url(./static/images/hhwy/hhwy_3p.jpg)'}"></div>
+        <div class="swp-image"><img src="static/images/hhwy/hhwy_3p.jpg" alt="" class="arrow" style="width:100%;height:100%;"></div>
       </swiper-slide>
     </swiper>
     <transition name="container-arrow" enter-active-class="fadeInUp Slow" leave-active-class="zoomOut">
