@@ -124,6 +124,14 @@ export default new Router({
       meta: {
         title: '上传企业信息'
       }
+    },
+    {
+      path: '/binding',
+      name: 'Binding',
+      component: () => import('@/components/Binding'),
+      meta: {
+        title: '绑定手机号'
+      }
     }
     /*,
     {

@@ -13,6 +13,7 @@
     <div><router-link to="/user">用户中心</router-link></div>
     <div><router-link to="/joinCompany">加入企业</router-link></div>
     <div><router-link to="/uploadCompanyInfo">上传企业信息</router-link></div>
+    <div><router-link to="/binding">绑定手机号</router-link></div>
   </div>
 </template>
 
