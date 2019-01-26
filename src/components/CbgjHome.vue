@@ -34,7 +34,6 @@
               <div class="contact-top">
                   <div>热线电话：</div>
                   <a href="tel:027-82337199">027-82337199</a>
-                  <a href="tel:4001127199">4001127199</a>
               </div>
               <div class="contact-center"><a href="https://m.amap.com/search/mapview/poiid=B0FFIJP5W9&keywords=%E8%88%B9%E8%88%B6%E5%9B%BD%E9%99%85%E5%B9%BF%E5%9C%BA"><img src="static/images/cbgj/map.jpg" style="width:100%;"></a></div>
               <div class="contact-bottom">
@@ -43,6 +42,9 @@
               </div>
           </div>
         </div>
+      </swiper-slide>
+      <swiper-slide class="swiper-item">
+        <div class="swp-image" :style="{backgroundImage: 'url(./static/images/cbgj/5.jpg)'}"></div>
       </swiper-slide>
     </swiper>
     <transition name="container-arrow" enter-active-class="fadeInUp Slow" leave-active-class="zoomOut">

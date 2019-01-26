@@ -47,6 +47,9 @@
           </div>
         </div>
       </swiper-slide>
+      <swiper-slide class="swiper-item">
+        <div class="swp-image" :style="{backgroundImage: 'url(./static/images/1818/5.jpg)'}"></div>
+      </swiper-slide>
     </swiper>
     <transition name="container-arrow" enter-active-class="fadeInUp Slow" leave-active-class="zoomOut">
       <div v-if="sliderArrow" class="container-arrow animated">

@@ -8,8 +8,8 @@
               <a href="https://m.amap.com/search/mapview/poiid=B0FFIJP5W9&keywords=%E8%88%B9%E8%88%B6%E5%9B%BD%E9%99%85%E5%B9%BF%E5%9C%BA"><img src="static/images/lxwm-img-1.png" style="width:100%;"></a></div>
             <div>
               <div>热线电话：</div>
-              <a href="tel:027-87302928">027-87302928</a>
-              <a href="tel:4001127199">4001127199</a></div>
+              <a href="tel:027-87302928">027-82337199</a>
+              </div>
           </div>
           <div class="contact lxwm-bottom">
             <div class="">
@@ -17,7 +17,7 @@
             <div>
               <div>热线电话：</div>
               <a href="tel:027-87302928">027-87302928</a>
-              <a href="tel:4001127199">4001127199</a></div>
+              </div>
           </div>
         </div>
       </div>

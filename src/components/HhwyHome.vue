@@ -9,12 +9,12 @@
           <transition name="swp1-t1" enter-active-class="bounceIn delay-1s">
             <img v-if="swp.swp1[1]" src="static/images/hhwy/swp1-t1.png" class="swp1-t1 animated">
           </transition>
-          <transition name="swp1-t2" enter-active-class="lightSpeedIn delay-2s">
+          <!-- <transition name="swp1-t2" enter-active-class="lightSpeedIn delay-2s">
             <img v-if="swp.swp1[2]" src="static/images/hhwy/swp1-t2.png" class="swp1-t2 animated">
           </transition>
           <transition name="swp1-t3" enter-active-class="fadeInLeft delay-2s">
             <img v-if="swp.swp1[3]" src="static/images/hhwy/swp1-t3.png" class="swp1-t3 animated">
-          </transition>
+          </transition>-->
         </div>
       </swiper-slide>
       <swiper-slide class="swiper-item">
@@ -22,10 +22,13 @@
           <transition name="swp2-t0" enter-active-class="zoomIn">
             <img v-if="swp.swp2[0]" src="static/images/hhwy/swp2-t0.png" class="swp2-t0 animated">
           </transition>
-          <transition name="swp2-t1" enter-active-class="zoomInUp delay-1s">
+          <!--<transition name="swp2-t1" enter-active-class="zoomInUp delay-1s">
             <img v-if="swp.swp2[1]" src="static/images/hhwy/swp2-t1.png" class="swp2-t1 animated">
-          </transition>
+          </transition> -->
         </div>
+      </swiper-slide>
+      <swiper-slide class="swiper-item">
+        <div class="swp-image" :style="{backgroundImage: 'url(./static/images/hhwy/hhwy_3p.jpg)'}"></div>
       </swiper-slide>
     </swiper>
     <transition name="container-arrow" enter-active-class="fadeInUp Slow" leave-active-class="zoomOut">
@@ -114,13 +117,13 @@ export default {
     -moz-background-size: 100% 100%;
   }
   .hhwy-wrap .swp1-t0{
-    margin-top: 105px;
+    margin-top: 130px;
     margin-left: auto;
     margin-right: auto;
     width: 86%;
   }
   .hhwy-wrap .swp1-t1{
-    margin-top: 15px;
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
     width: 86%;
@@ -142,7 +145,7 @@ export default {
     height: 170px;
   }
   .hhwy-wrap .swp2-t0{
-    margin-top: 175px;
+    margin-top: 200px;
     margin-left: auto;
     margin-right: auto;
     width: 86%;
