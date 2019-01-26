@@ -37,7 +37,6 @@
             <div class="contact-top">
                 <div>热线电话：</div>
                 <a href="tel:027-87302928">027-87302928</a>
-                <a href="tel:4001127199">4001127199</a>
             </div>
             <div class="contact-center"><a href="https://m.amap.com/search/mapview/keywords=%E8%88%B9%E8%88%B6%E5%9B%BD%E9%99%851818&city=420106&poiid=B0FFGWI3EZ"><img src="static/images/1818/map.jpg" style="width:100%;"></a></div>
             <div class="contact-bottom">
