@@ -257,6 +257,7 @@ export default {
     padding-left: 15px;
     height: 26px;
     line-height: 26px;
+    width: 30px;
   }
 }
 </style>
