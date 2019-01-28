@@ -13,7 +13,7 @@
        <div class="form_item">
         <input type="text" name="mobile" placeholder="请输入手机号" v-model="user.mobile" maxlength="11" />
        </div>
-       <div class="form_item">
+       <div class="form_item verification">
         <input type="text" name="vcode" placeholder="请输入短信证码" v-model="user.vcode" maxlength="6" />
         <div>
           <div v-if="sending" class="count-down" style="color: white">{{ countSecond }}</div>
@@ -243,5 +243,20 @@ export default {
       padding: 0 28px;
       color: #fff;
     }
+}
+.verification{
+  position: relative;
+  > div{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    padding-right: 45px;
+    font-size: 14px;
+    border-left: 1px #ffffff9e solid;
+    padding-left: 15px;
+    height: 26px;
+    line-height: 26px;
+  }
 }
 </style>
