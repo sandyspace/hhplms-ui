@@ -90,7 +90,7 @@ export default new Router({
       name: 'ActivityList',
       component: ActivityList,
       meta: {
-        title: '优惠信息'
+        title: '商户咨询'
       }
     },
     {

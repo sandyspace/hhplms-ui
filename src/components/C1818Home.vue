@@ -40,7 +40,7 @@
             </div>
             <div class="contact-center"><a href="https://m.amap.com/search/mapview/keywords=%E8%88%B9%E8%88%B6%E5%9B%BD%E9%99%851818&city=420106&poiid=B0FFGWI3EZ"><img src="static/images/1818/map.jpg" style="width:100%;"></a></div>
             <div class="contact-bottom">
-                <div><span>地址信息：</span><span>武汉市武昌区中北路交汇处</span></div>
+                <div><span>地址信息：</span><span>武汉市武昌区中北路与公正路交汇处</span></div>
                 <div><span>交通方式：</span><span>轻轨四号线、楚河汉街站</span></div>
             </div>
           </div>

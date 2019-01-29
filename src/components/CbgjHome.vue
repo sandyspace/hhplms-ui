@@ -37,7 +37,7 @@
               </div>
               <div class="contact-center"><a href="https://m.amap.com/search/mapview/poiid=B0FFIJP5W9&keywords=%E8%88%B9%E8%88%B6%E5%9B%BD%E9%99%85%E5%B9%BF%E5%9C%BA"><img src="static/images/cbgj/map.jpg" style="width:100%;"></a></div>
               <div class="contact-bottom">
-                  <div><span>地址信息：</span><span>武汉船舶国际广场地处汉口京汉大道与江汉路步行街交汇处</span></div>
+                  <div><span>地址信息：</span><span>武汉市江岸区江汉路与京汉大道交汇处</span></div>
                   <div><span>交通方式：</span><span>轻轨一号线、地铁二号线、循礼门站</span></div>
               </div>
           </div>

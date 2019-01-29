@@ -3,9 +3,6 @@
     <swiper :options="swiperOption" class="swiper-box" ref="swiperRef" @transitionEnd="onTransitionEnd">
       <swiper-slide class="swiper-item">
         <div class="swp-image" :style="{backgroundImage: 'url(./static/images/xmgk/1.jpg)'}">
-          <transition name="swp0-t0" enter-active-class="bounceInDown">
-            <img v-if="swp.swp0[0]" src="static/images/xmgk/swp0-t0.png" class="swp0-t0 animated">
-          </transition>
           <transition name="swp0-t1" enter-active-class="bounceIn delay-1s">
             <img v-if="swp.swp0[1]" src="static/images/xmgk/swp0-t1.png" class="swp0-t1 animated">
           </transition>
@@ -47,6 +44,9 @@
             </transition>
           </div>
         </div>
+      </swiper-slide>
+      <swiper-slide class="swiper-item">
+        <div class="swp-image"><img src="static/images/xmgk/5.jpg" alt="" class="arrow" style="width:100%;height:100%;"></div>
       </swiper-slide>
     </swiper>
     <transition name="container-arrow" enter-active-class="fadeInUp Slow" leave-active-class="zoomOut">
@@ -144,14 +144,8 @@ export default {
     background-size: 100% 100%;
     -moz-background-size: 100% 100%;
   }
-  .xmgk-wrap .swp0-t0{
-    margin-top: 105px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-  }
   .xmgk-wrap .swp0-t1{
-    margin-top: 30px;
+    margin-top: 160px;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
