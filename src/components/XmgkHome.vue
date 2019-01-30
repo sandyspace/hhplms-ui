@@ -9,16 +9,6 @@
         </div>
       </swiper-slide>
       <swiper-slide class="swiper-item">
-        <div class="swp-image" :style="{backgroundImage: 'url(./static/images/xmgk/2.jpg)'}">
-          <transition name="swp1-t1" enter-active-class="fadeInLeft">
-            <img v-if="swp.swp1[1]" src="static/images/xmgk/swp1-t1.png" class="swp1-t1 animated">
-          </transition>
-          <transition name="swp1-t2" enter-active-class="fadeInUp">
-            <img v-if="swp.swp1[2]" src="static/images/xmgk/swp1-t2.png" class="swp1-t2 animated">
-          </transition>
-        </div>
-      </swiper-slide>
-      <swiper-slide class="swiper-item">
         <div class="swp-image" :style="{backgroundImage: 'url(./static/images/xmgk/3.jpg)'}">
           <div class="swp-box-bottom wap-0">
           <transition name="swp2-t0" enter-active-class="zoomIn">
@@ -27,7 +17,20 @@
           <transition name="swp2-t1" enter-active-class="rollIn">
             <img v-if="swp.swp2[1]" src="static/images/xmgk/swp2-t1.png" class="swp2-t1 animated">
           </transition>
+          <transition name="swp2-t1-1" enter-active-class="rollIn">
+            <img v-if="swp.swp2[1]" src="static/images/xmgk/swp2-t1-1.png" class="swp2-t1-1 animated">
+          </transition>
           </div>
+        </div>
+      </swiper-slide>
+      <swiper-slide class="swiper-item">
+        <div class="swp-image" :style="{backgroundImage: 'url(./static/images/xmgk/2.jpg)'}">
+          <transition name="swp1-t1" enter-active-class="fadeInLeft">
+            <img v-if="swp.swp1[1]" src="static/images/xmgk/swp1-t1.png" class="swp1-t1 animated">
+          </transition>
+          <transition name="swp1-t2" enter-active-class="fadeInUp">
+            <img v-if="swp.swp1[2]" src="static/images/xmgk/swp1-t2.png" class="swp1-t2 animated">
+          </transition>
         </div>
       </swiper-slide>
       <swiper-slide class="swiper-item">
@@ -88,10 +91,10 @@ export default {
         this.swp.swp0 = [true, true]
       }
       if (i === 1) {
-        this.swp.swp1 = [true, true, true]
+        this.swp.swp2 = [true, true]
       }
       if (i === 2) {
-        this.swp.swp2 = [true, true]
+        this.swp.swp1 = [true, true, true]
       }
       if (i === 3) {
         this.swp.swp3 = [true, true]
@@ -185,7 +188,22 @@ export default {
     height: 125px;
     z-index: 100;
   }
+  .xmgk-wrap .swp2-t1{
+    position: relative;
+    display: block;
+    margin-left: 40px;
+    width: 190px;
+    height: 125px;
+    z-index: 100;
+  }
   .xmgk-wrap .swp3-t1{
+    position: relative;
+    margin-top: -80px;
+    margin-left: 80px;
+    width: 261px;
+    z-index: 99;
+  }
+  .xmgk-wrap .swp2-t1-1{
     position: relative;
     margin-top: -80px;
     margin-left: 80px;
