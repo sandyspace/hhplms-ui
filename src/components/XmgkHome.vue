@@ -10,9 +10,6 @@
       </swiper-slide>
       <swiper-slide class="swiper-item">
         <div class="swp-image" :style="{backgroundImage: 'url(./static/images/xmgk/2.jpg)'}">
-          <transition name="swp1-t0" enter-active-class="zoomIn">
-            <img v-if="swp.swp1[0]" src="static/images/xmgk/swp1-t0.png" class="swp1-t0 animated">
-          </transition>
           <transition name="swp1-t1" enter-active-class="fadeInLeft">
             <img v-if="swp.swp1[1]" src="static/images/xmgk/swp1-t1.png" class="swp1-t1 animated">
           </transition>
@@ -157,16 +154,16 @@ export default {
     width: 90%;
   }
   .xmgk-wrap .swp1-t1{
-    margin-top: 40px;
+    margin-top: 160px;
     margin-left: 0px;
     margin-right: auto;
     width: 80%;
   }
   .xmgk-wrap .swp1-t2{
     margin-top: -80px;
-    margin-left: 25%;
+    margin-left: 35%;
     margin-right: auto;
-    width: 70%;
+    width: 60%;
   }
   .xmgk-wrap .swp2-t0{
     margin-left: auto;
@@ -174,7 +171,7 @@ export default {
     width: 90%;
   }
   .xmgk-wrap .swp2-t1{
-    margin-top: 20px;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
@@ -198,5 +195,9 @@ export default {
   .swp-box-bottom{
     position:absolute;
     bottom:20px;
+  }
+  .swp-box-bottom.wap-0{
+    position:initial;
+    margin-top: 160px;
   }
 </style>
