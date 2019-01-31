@@ -193,7 +193,6 @@ export default {
     display: block;
     margin-left: 40px;
     width: 190px;
-    height: 125px;
     z-index: 100;
   }
   .xmgk-wrap .swp3-t1{
@@ -205,7 +204,7 @@ export default {
   }
   .xmgk-wrap .swp2-t1-1{
     position: relative;
-    margin-top: -80px;
+    margin-top: -100px;
     margin-left: 80px;
     width: 261px;
     z-index: 99;
