@@ -7,7 +7,7 @@
             <div class="">
               <a href="https://m.amap.com/search/mapview/poiid=B0FFIJP5W9&keywords=%E8%88%B9%E8%88%B6%E5%9B%BD%E9%99%85%E5%B9%BF%E5%9C%BA"><img src="static/images/lxwm-img-1.png" style="width:100%;"></a></div>
             <div>
-              <div>热线电话：</div>
+              <div>项目部电话：</div>
               <a href="tel:027-87302928">027-82337199</a>
               </div>
           </div>
@@ -15,7 +15,7 @@
             <div class="">
               <a href="https://m.amap.com/search/mapview/keywords=%E8%88%B9%E8%88%B6%E5%9B%BD%E9%99%851818&city=420106&poiid=B0FFGWI3EZ"><img src="static/images/lxwm-img-2.png" style="width:100%;"></a></div>
             <div>
-              <div>热线电话：</div>
+              <div>项目部电话：</div>
               <a href="tel:027-87302928">027-87302928</a>
               </div>
           </div>
