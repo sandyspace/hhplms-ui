@@ -22,7 +22,7 @@ Vue.config.productionTip = false
 
 let currentHost = window.location.host
 
-let currentRootUrl = 'https://iotecloud.com'
+let currentRootUrl = 'https://www.iotecloud.com'
 if (currentHost === 'test.iotecloud.com') {
   currentRootUrl = 'http://test.iotecloud.com'
 }
