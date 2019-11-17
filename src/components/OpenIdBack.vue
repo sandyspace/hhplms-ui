@@ -27,6 +27,7 @@ export default {
   },
   mounted: function () {
     this.openId = this.$route.query.openId
+    this.login()
   },
   methods: {
     login () {
@@ -44,10 +45,10 @@ export default {
         .catch(error => {
           if (error.response) {
             let errorCode = error.response.data.errorCode
-            if (errorCode === '60') {
+            if (errorCode === 60) {
               // 没有绑定手机号
-              that.$router.push({path: '/binding', params: { openId: that.openId }})
-            } else if (errorCode === '12') {
+              that.$router.push({path: '/binding', query: { openId: that.openId }})
+            } else if (errorCode === 12) {
               // openId不存在
               that.$router.push({path: '/404'})
             } else {

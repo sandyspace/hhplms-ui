@@ -17,7 +17,7 @@ import ActivityList from '@/components/ActivityList'
 import JoinCompany from '@/components/JoinCompany'
 import UploadCompanyInfo from '@/components/UploadCompanyInfo'
 import NotFound from '@/components/NotFound'
-import Error from '@/components/Error'
+import ErrorPage from '@/components/Error'
 
 Vue.use(Router)
 
@@ -153,6 +153,14 @@ export default new Router({
       }
     },
     {
+      path: '/error',
+      name: 'Error',
+      component: ErrorPage,
+      meta: {
+        title: 'Error'
+      }
+    },
+    {
       path: '/404',
       name: 'NotFound',
       component: NotFound,
@@ -166,14 +174,6 @@ export default new Router({
       component: NotFound,
       meta: {
         title: '404'
-      }
-    },
-    {
-      path: '/error',
-      name: 'Error',
-      component: Error,
-      meta: {
-        title: 'Error'
       }
     }
     /*,

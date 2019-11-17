@@ -53,9 +53,9 @@ export default {
   },
   mounted () {
     // 获取OpenId
-    this.openId = this.$route.params.openId
+    this.openId = this.$route.query.openId
     if (!this.openId) {
-      that.$router.push({path: '/404'})
+      this.$router.push({path: '/404'})
     }
   },
   methods: {
@@ -94,7 +94,6 @@ export default {
       that.countSecond = 60
       that.sendingInterval = setInterval(() => {
         that.countSecond = that.countSecond - 1
-        console.log( that.countSecond )
         if(that.countSecond === 0){
           that.sending = false
           clearInterval(that.sendingInterval)

@@ -64,7 +64,9 @@ export default {
       this.openId = openId
     } else {
       let wxAppId = this.G.wxAppId
-      let redirectUrl = encodeURIComponent(this.G.baseURL + '/api/auth/account/wechatAuthCallback')
+      let redirectUrl = this.G.baseURL + '/api/auth/account/wechatAuthCallback'
+      console.log('redirectUrl', redirectUrl)
+      redirectUrl = encodeURIComponent(redirectUrl)
       // 生成微信请求授权字符串
       this.wxAuthRequestUrl = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${wxAppId}&redirect_uri=${redirectUrl}&response_type=code&scope=snsapi_userinfo&state=STATE`
     }

@@ -2,6 +2,8 @@
   <div class="not-found">
     <i class="weui-icon-warn weui-icon_msg-primary"></i>
     <p>页面错误，请稍后再试~</p>
+    <p>{{ errorCode }}</p>
+    <p>{{ errorMsg }}</p>
     <div class="btn">
       <router-link to="/user">返回</router-link>
     </div>
@@ -12,7 +14,10 @@
 export default {
   name: 'Index',
   data () {
-    return {}
+    return {
+      errorCode: this.$route.query.errorCode,
+      errorMsg: this.$route.query.errorMsg
+    }
   },
   mounted: function () {},
   methods: {}
