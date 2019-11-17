@@ -17,7 +17,7 @@
                 <span class="submit-btn" @click="login">提交</span>
               </div>
               <div class="form_item" style="padding: 0 40px;">
-                <span class="zc_zh" style="float: right;"><router-link to="/register"><a>找回密码</a></router-link></span>
+                <span class="zc_zh" style="float: right;"><router-link to="/changePassword"><a>找回密码</a></router-link></span>
                 <span class="zc_zh">没有账号?<router-link to="/register"><a>立即注册</a></router-link></span>
               </div>
               <div class="form_item wx_login">
@@ -41,17 +41,22 @@ export default {
         userName: '',
         password: ''
       },
-      errorMessage: ''
+      errorMessage: '',
+      // 微信请求授权字符串
+      wxAuthRequestUrl: null
     }
   },
   mounted: function () {
     // 判断用户是否登录，如果已登录直接去用户中心
     let access_token = window.localStorage[this.G.tokenKey]
     if(access_token != null && access_token != '' && access_token != undefined) {
-      console.log('login push to [/user]')
       this.$router.push({path: '/user'})
       return false
     }
+    let wxAppId = this.G.wxAppId
+    let redirectUrl = encodeURIComponent(this.G.baseURL + '/api/auth/account/wechatAuthCallback')
+    // 生成微信请求授权字符串
+    this.wxAuthRequestUrl = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${wxAppId}&redirect_uri=${redirectUrl}&response_type=code&scope=snsapi_userinfo&state=STATE`
   },
   methods: {
     login: function () {

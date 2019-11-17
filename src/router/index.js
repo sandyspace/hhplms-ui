@@ -141,6 +141,14 @@ export default new Router({
       meta: {
         title: '绑定手机号'
       }
+    },
+    {
+      path: '/openIdBack',
+      name: 'OpenIdBack',
+      component: () => import('@/components/OpenIdBack'),
+      meta: {
+        title: '微信账号登录'
+      }
     }
     /*,
     {

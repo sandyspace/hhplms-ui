@@ -1,6 +1,6 @@
 <template>
   <div class="register-wrap">
-   <div class="section section-box-5">
+   <div v-if="openId" class="section section-box-5">
     <div class="balloon-container">
      <h3>绑定手机号</h3>
      <div class="tu9-wrapper clear">
@@ -47,10 +47,17 @@ export default {
       success: false,
       sending: false, // 是否正在发送验证码
       countSecond: null, // 倒计时秒数
-      sendingInterval: null // 倒计时定时器
+      sendingInterval: null, // 倒计时定时器
+      openId: null
     }
   },
-  mounted: function () {},
+  mounted () {
+    // 获取OpenId
+    this.openId = this.$route.params.openId
+    if (!this.openId) {
+      that.$router.push({path: '/404'})
+    }
+  },
   methods: {
     binding() {
       this.errorMessage = ''
