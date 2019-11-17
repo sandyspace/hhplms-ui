@@ -21,7 +21,6 @@ html,body {
 }
 body {
   height: 100%;
-  background: #eee;
   margin: 0;
 }
 #app {

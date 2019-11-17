@@ -10,11 +10,12 @@
     <div><router-link to="/activitys">商户资讯</router-link></div>
     <div><router-link to="/register">用户注册</router-link></div>
     <div><router-link to="/login">登录</router-link></div>
-    <div><router-link to="/modify">修改密码</router-link></div>
+    <div><router-link to="/changePassword">修改密码</router-link></div>
     <div><router-link to="/user">用户中心</router-link></div>
     <div><router-link to="/joinCompany">加入企业</router-link></div>
     <div><router-link to="/uploadCompanyInfo">上传企业信息</router-link></div>
     <div><router-link to="/binding">绑定手机号</router-link></div>
+    <div><router-link to="/NotFound">404</router-link></div>
   </div>
 </template>
 
@@ -29,4 +30,21 @@ export default {
 }
 </script>
 <style scoped>
+.index-wrap h3{
+  margin: 0;
+  padding: 30px 0;
+}
+.index-wrap > div{
+  margin-bottom: 20px;
+  display: inline-block;
+  background: #7eb5db;
+  width: 85%;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 4px;
+}
+.index-wrap > div a{
+  color: #fff;
+  text-decoration:none;
+}
 </style>

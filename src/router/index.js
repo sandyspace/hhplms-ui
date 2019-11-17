@@ -16,6 +16,8 @@ import Feedback from '@/components/Feedback'
 import ActivityList from '@/components/ActivityList'
 import JoinCompany from '@/components/JoinCompany'
 import UploadCompanyInfo from '@/components/UploadCompanyInfo'
+import NotFound from '@/components/NotFound'
+import Error from '@/components/Error'
 
 Vue.use(Router)
 
@@ -148,6 +150,30 @@ export default new Router({
       component: () => import('@/components/OpenIdBack'),
       meta: {
         title: '微信账号登录'
+      }
+    },
+    {
+      path: '/404',
+      name: 'NotFound',
+      component: NotFound,
+      meta: {
+        title: '404'
+      }
+    },
+    {
+      path: '*',
+      name: 'NotFound',
+      component: NotFound,
+      meta: {
+        title: '404'
+      }
+    },
+    {
+      path: '/error',
+      name: 'Error',
+      component: Error,
+      meta: {
+        title: 'Error'
       }
     }
     /*,
