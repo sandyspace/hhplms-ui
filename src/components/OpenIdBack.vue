@@ -25,6 +25,7 @@ export default {
         'openId': this.openId
       })
         .then(response => {
+          window.localStorage[this.G.openIdKey] = this.openId
           window.localStorage[this.G.tokenKey] = response.data.token
           // 登录成功去个人中心
           that.$router.push({path: '/user'})
