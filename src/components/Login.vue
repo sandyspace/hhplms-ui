@@ -20,8 +20,11 @@
                 <span class="zc_zh" style="float: right;"><router-link to="/changePassword"><a>找回密码</a></router-link></span>
                 <span class="zc_zh">没有账号?<router-link to="/register"><a>立即注册</a></router-link></span>
               </div>
-              <div class="form_item wx_login">
-                <router-link to="/"><div class="box"><span></span></div><p>微信快速登陆</p></router-link>
+              <div v-if="openId" class="form_item wx_login">
+                <a :to="{path: '/openIdBack', query: {openId : openId}}"><div class="box"><span></span></div><p>微信快速登陆</p></a>
+              </div>
+              <div v-if="wxAuthRequestUrl" class="form_item wx_login">
+                <a :href="wxAuthRequestUrl"><div class="box"><span></span></div><p>微信快速登陆</p></a>
               </div>
           </form>
         </div>
@@ -42,21 +45,29 @@ export default {
         password: ''
       },
       errorMessage: '',
+      // 已有微信openId
+      openId: null,
       // 微信请求授权字符串
       wxAuthRequestUrl: null
     }
   },
-  mounted: function () {
+  mounted () {
     // 判断用户是否登录，如果已登录直接去用户中心
     let access_token = window.localStorage[this.G.tokenKey]
-    if(access_token != null && access_token != '' && access_token != undefined) {
+    if (access_token != null && access_token != '' && access_token != undefined) {
       this.$router.push({path: '/user'})
       return false
     }
-    let wxAppId = this.G.wxAppId
-    let redirectUrl = encodeURIComponent(this.G.baseURL + '/api/auth/account/wechatAuthCallback')
-    // 生成微信请求授权字符串
-    this.wxAuthRequestUrl = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${wxAppId}&redirect_uri=${redirectUrl}&response_type=code&scope=snsapi_userinfo&state=STATE`
+    // 获取本地缓存的openId
+    let openId = window.localStorage[this.G.openIdKey]
+    if (openId != null && openId != '' && openId != undefined) {
+      this.openId = openId
+    } else {
+      let wxAppId = this.G.wxAppId
+      let redirectUrl = encodeURIComponent(this.G.baseURL + '/api/auth/account/wechatAuthCallback')
+      // 生成微信请求授权字符串
+      this.wxAuthRequestUrl = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${wxAppId}&redirect_uri=${redirectUrl}&response_type=code&scope=snsapi_userinfo&state=STATE`
+    }
   },
   methods: {
     login: function () {

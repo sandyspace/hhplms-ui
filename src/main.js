@@ -36,6 +36,7 @@ let currentImageUrl = currentRootUrl + '/client/cbgj/upload'
 Vue.prototype.G = {
   baseURL: currentRootUrl,
   tokenKey: 'access_token',
+  openIdKey: 'wx_open_id',
   // 微信appId
   wxAppId: 'wx81199b5687028ca5',
   // 校验token过期，如果过期就跳转登录
