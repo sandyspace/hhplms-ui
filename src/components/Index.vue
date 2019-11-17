@@ -10,6 +10,7 @@
     <div><router-link to="/activitys">商户资讯</router-link></div>
     <div><router-link to="/register">用户注册</router-link></div>
     <div><router-link to="/login">登录</router-link></div>
+    <div><router-link to="/modify">修改密码</router-link></div>
     <div><router-link to="/user">用户中心</router-link></div>
     <div><router-link to="/joinCompany">加入企业</router-link></div>
     <div><router-link to="/uploadCompanyInfo">上传企业信息</router-link></div>

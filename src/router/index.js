@@ -10,6 +10,7 @@ import XmgkHome from '@/components/XmgkHome'
 import Login from '@/components/Login'
 import UserHome from '@/components/UserHome'
 import Register from '@/components/Register'
+import Modify from '@/components/Modify'
 import ContactUs from '@/components/ContactUs'
 import Feedback from '@/components/Feedback'
 import ActivityList from '@/components/ActivityList'
@@ -67,6 +68,14 @@ export default new Router({
       component: Register,
       meta: {
         title: '账号注册'
+      }
+    },
+    {
+      path: '/modify',
+      name: 'Modify',
+      component: Modify,
+      meta: {
+        title: '密码修改'
       }
     },
     {
