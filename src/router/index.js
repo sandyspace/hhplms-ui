@@ -10,7 +10,7 @@ import XmgkHome from '@/components/XmgkHome'
 import Login from '@/components/Login'
 import UserHome from '@/components/UserHome'
 import Register from '@/components/Register'
-import Modify from '@/components/Modify'
+import ChangePassword from '@/components/ChangePassword'
 import ContactUs from '@/components/ContactUs'
 import Feedback from '@/components/Feedback'
 import ActivityList from '@/components/ActivityList'
@@ -71,9 +71,9 @@ export default new Router({
       }
     },
     {
-      path: '/modify',
-      name: 'Modify',
-      component: Modify,
+      path: '/changePassword',
+      name: 'ChangePassword',
+      component: ChangePassword,
       meta: {
         title: '密码修改'
       }

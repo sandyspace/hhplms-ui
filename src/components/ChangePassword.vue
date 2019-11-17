@@ -27,7 +27,7 @@
         <input type="password" name="userpw2" placeholder="请确认密码" v-model="user.userpw2" maxlength="20" />
        </div>
        <div class="form_item" style="margin:0">
-        <div class="submit-btn" @click="modify">提交</div>
+        <div class="submit-btn" @click="changePassword">提交</div>
        </div>
        <div class="form_item">
         <span class="zc_zh">如果已有账号，点击<router-link to="/login"><a>立即登录</a></router-link></span>
@@ -44,7 +44,7 @@
 /* eslint-disable */ 
 
 export default {
-  name: 'Modify',
+  name: 'ChangePassword',
   data () {
     return {
       user: {
@@ -62,7 +62,7 @@ export default {
   },
   mounted: function () {},
   methods: {
-    modify: function () {
+    changePassword: function () {
       this.errorMessage = ''
       var mobile = this.user.mobile
 	    var userpw1 = this.user.userpw1
