@@ -16,8 +16,8 @@
        <div class="form_item verification">
         <input type="text" name="vcode" placeholder="请输入短信证码" v-model="user.vcode" maxlength="6" />
         <div>
-          <div v-if="sending" class="count-down" style="color: white">{{ countSecond }}</div>
-          <div v-else class="send-btn" style="color: white" @click="sendSms">发送</div>
+          <div v-if="sending" class="count-down" style="color: white">{{ countSecond }}s后重新发送</div>
+          <div v-else class="send-btn" style="color: white" @click="sendSms">发送验证码</div>
         </div>
        </div>
        <div class="form_item" style="margin:0">
@@ -243,21 +243,5 @@ export default {
       padding: 0 28px;
       color: #fff;
     }
-}
-.verification{
-  position: relative;
-  > div{
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    top: 10px;
-    padding-right: 45px;
-    font-size: 14px;
-    border-left: 1px #ffffff9e solid;
-    padding-left: 15px;
-    height: 26px;
-    line-height: 26px;
-    width: 30px;
-  }
 }
 </style>

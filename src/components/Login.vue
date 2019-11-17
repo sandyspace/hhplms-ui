@@ -8,7 +8,7 @@
             <div class="error-msg">{{errorMessage}}</div>
               <input type="hidden" name="placeholder">
               <div class="form_item">
-                <input type="text" name="name" placeholder="账号" v-model="user.username" maxlength="50">
+                <input type="text" name="name" placeholder="手机号" v-model="user.username" maxlength="50">
               </div>
               <div class="form_item">
                 <input type="password" name="userpw" placeholder="密码" v-model="user.password" maxlength="20">
@@ -16,8 +16,12 @@
               <div class="form_item">
                 <span class="submit-btn" @click="login">提交</span>
               </div>
-              <div class="form_item">
-                 <span class="zc_zh">如果还没有账号，点击<router-link to="/register"><a>立即注册</a></router-link></span>
+              <div class="form_item" style="padding: 0 40px;">
+                <span class="zc_zh" style="float: right;"><router-link to="/register"><a>找回密码</a></router-link></span>
+                <span class="zc_zh">没有账号?<router-link to="/register"><a>立即注册</a></router-link></span>
+              </div>
+              <div class="form_item wx_login">
+                <router-link to="/"><div class="box"><span></span></div><p>微信快速登陆</p></router-link>
               </div>
           </form>
         </div>
@@ -87,7 +91,32 @@ export default {
     height: 100%;
     background: url(../../static/images/login_bj.png) no-repeat;
     background-size: 100% 100%;
-
+    .wx_login{
+      text-align: center !important;
+      padding-top: 30px !important;
+      a{
+        display: inline-block;
+      }
+      .box{
+        display: inline-flex;
+        background: #ffffff26;
+        padding: 6px;
+        border-radius: 50%;
+        span{
+          width: 60px;
+          height: 60px;
+          display: inline-block;
+          background: url(../../static/images/icon2.png) no-repeat;
+          background-position-y: -61px;
+        }
+      }
+      p{
+        margin: 0;
+        color: #fff;
+        font-size: 14px;
+        padding-top: 8px;
+      }
+    }
     .error-msg{
       color: #fff;
       font-size: 15px;
@@ -132,6 +161,7 @@ export default {
         overflow: hidden;
         margin: 25px 0;
         padding: 0 28px;
+        text-align: initial;
     }
     .form_item:nth-of-type(1){
       margin-top:0;
@@ -213,8 +243,7 @@ export default {
     }
     .zc_zh{
       font-size: 0.3rem;
-      text-align: center;
-      display: block;
+      display: inline-block;
       color: #fff;
       font-size: 14px;
     }

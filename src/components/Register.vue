@@ -13,8 +13,12 @@
        <div class="form_item">
         <input type="text" name="mobile" placeholder="请输入手机号" v-model="user.mobile" maxlength="11" />
        </div>
-       <div class="form_item">
-        <input type="text" name="email" placeholder="请输入邮箱地址" v-model="user.email" maxlength="50" />
+       <div class="form_item verification">
+        <input type="text" name="vcode" placeholder="请输入短信证码" v-model="user.vcode" maxlength="6" />
+        <div>
+          <div v-if="sending" class="count-down" style="color: white">{{ countSecond }}s后重新发送</div>
+          <div v-else class="send-btn" style="color: white" @click="sendSms">发送验证码</div>
+        </div>
        </div>
        <div class="form_item">
         <input type="password" name="userpw1" placeholder="请输入密码" v-model="user.userpw1" maxlength="20" />
@@ -45,12 +49,15 @@ export default {
     return {
       user: {
         mobile: '',
-        email: '',
+        vcode: '',
         userpw1: '',
         userpw2: ''
       },
       errorMessage: '',
-      success: false
+      success: false,
+      sending: false, // 是否正在发送验证码
+      countSecond: null, // 倒计时秒数
+      sendingInterval: null // 倒计时定时器
     }
   },
   mounted: function () {},
@@ -58,9 +65,9 @@ export default {
     register: function () {
       this.errorMessage = ''
       var mobile = this.user.mobile
-	    var email = this.user.email
 	    var userpw1 = this.user.userpw1
       var userpw2 = this.user.userpw2
+      var vcode = this.user.email
       
       if(mobile == ''){
         this.errorMessage = '请输入手机号码'
@@ -70,12 +77,8 @@ export default {
         this.errorMessage = '请输入有效的手机号码'
         return false;
       }
-      if(email == ''){
-        this.errorMessage = '请输入邮箱地址'
-        return false;
-      }
-      if(!this.G.isEmailAvailable(email)){
-        this.errorMessage = '请输入有效的邮箱地址'
+      if(vcode == ''){
+        this.errorMessage = '请输入短信验证码'
         return false;
       }
       if(userpw1 == ''){
@@ -101,7 +104,6 @@ export default {
 
       this.$http.post('/api/auth/account/register', {
         'mobile': mobile,
-        'email': email,
         'password': userpw1
       })
       .then(response => {
@@ -114,6 +116,29 @@ export default {
           this.errorMessage = error.response.data.message
         }
       })
+    },
+    sendSms() {
+      var mobile = this.user.mobile
+      if(mobile == ''){
+        this.errorMessage = '请输入手机号码'
+        return false;
+      }
+      if(!this.G.isPoneAvailable(mobile)){
+        this.errorMessage = '请输入有效的手机号码'
+        return false;
+      }
+
+      var that = this
+      that.sending = true
+      that.countSecond = 60
+      that.sendingInterval = setInterval(() => {
+        that.countSecond = that.countSecond - 1
+        console.log( that.countSecond )
+        if(that.countSecond === 0){
+          that.sending = false
+          clearInterval(that.sendingInterval)
+        }
+      }, 1000);
     }
   }
 }
@@ -129,7 +154,6 @@ export default {
       font-size: 15px;
       text-align: left;
       padding-left: 32px;
-      width: 96%;
       margin: 0px auto 20px;
     }
 

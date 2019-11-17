@@ -49,4 +49,19 @@ body {
   width: 100%;
   height: 100%;
 }
+.verification{
+  position: relative;
+}
+.verification > div{
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  padding-right: 45px;
+  font-size: 14px;
+  border-left: 1px #ffffff9e solid;
+  padding-left: 15px;
+  height: 26px;
+  line-height: 26px;
+}
 </style>
