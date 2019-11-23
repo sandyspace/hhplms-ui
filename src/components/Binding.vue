@@ -17,11 +17,11 @@
         <input type="text" name="vcode" placeholder="请输入短信证码" v-model="user.vcode" maxlength="6" />
         <div>
           <div v-if="sending" class="count-down" style="color: white">{{ countSecond }}s后重新发送</div>
-          <div v-else class="send-btn" style="color: white" @click="sendSms">发送验证码</div>
+          <div v-else class="send-btn" style="color: white" @click="handleSendClick">发送验证码</div>
         </div>
        </div>
        <div class="form_item" style="margin:0">
-        <div class="submit-btn" @click="binding">提交</div>
+        <div class="submit-btn" @click="handleSubmit">提交</div>
        </div>
       </form>
 
@@ -59,10 +59,10 @@ export default {
     }
   },
   methods: {
-    binding() {
+    handleSubmit() {
       this.errorMessage = ''
       var mobile = this.user.mobile
-	    var vcode = this.user.email
+	    var vcode = this.user.vcode
       
       if(mobile == ''){
         this.errorMessage = '请输入手机号码'
@@ -76,22 +76,24 @@ export default {
         this.errorMessage = '请输入短信验证码'
         return false;
       }
-      this.success=true
+      this.bindingRequest()
     },
-    sendSms() {
-      var mobile = this.user.mobile
-      if(mobile == ''){
-        this.errorMessage = '请输入手机号码'
-        return false;
-      }
-      if(!this.G.isPoneAvailable(mobile)){
-        this.errorMessage = '请输入有效的手机号码'
-        return false;
-      }
-
+    // 处理发送验证码按钮点击事件
+    handleSendClick () {
       var that = this
+      var mobile = that.user.mobile
+      if(mobile == ''){
+        that.errorMessage = '请输入手机号码'
+        return false;
+      }
+      if(!that.G.isPoneAvailable(mobile)){
+        that.errorMessage = '请输入有效的手机号码'
+        return false;
+      }
       that.sending = true
       that.countSecond = 60
+      // 发送请求
+      that.sendSmsReqeust(mobile)
       that.sendingInterval = setInterval(() => {
         that.countSecond = that.countSecond - 1
         if(that.countSecond === 0){
@@ -99,6 +101,71 @@ export default {
           clearInterval(that.sendingInterval)
         }
       }, 1000);
+    },
+    // 发送获取验证码请求
+    sendSmsReqeust (mobile) {
+      var that = this
+      that.$http.post('/api/sys/dynamicCodes/retrieve', {
+        'mobile': mobile
+      })
+      .then(res => {
+        console.log(res)
+      })
+      .catch(error => {
+        that.sending = false
+        clearInterval(that.sendingInterval)
+        if (!!error.response) {
+          that.errorMessage = error.response.data.message
+        }
+      })
+    },
+    // 发送绑定手机号请求
+    bindingRequest () {
+      var that = this
+      that.$http.post('/api/auth/account/wechat-mobile/binding', {
+        'dynamicCode': that.user.vcode,
+        'mobile': that.user.mobile,
+        'openId': that.openId
+      })
+      .then(res => {
+        that.success = true
+        // 调用微信登录接口直接登录
+        that.wxLoginRequest()
+      })
+      .catch(error => {
+        that.success = false
+        if (!!error.response) {
+          that.errorMessage = error.response.data.message
+        }
+      })
+    },
+    // 发送登录请求
+    wxLoginRequest () {
+      var that = this
+      that.errorMessage = ''
+      that.$http.post('/api/auth/account/wechatLogin', {
+        'openId': that.openId
+      })
+      .then(response => {
+        window.localStorage[that.G.openIdKey] = that.openId
+        window.localStorage[that.G.tokenKey] = response.data.token
+        // 登录成功去个人中心
+        that.$router.push({path: '/user'})
+      })
+      .catch(error => {
+        if (error.response) {
+          let errorCode = error.response.data.errorCode
+          if (errorCode === 60) {
+            // 没有绑定手机号
+            that.$router.push({path: '/binding', query: { openId: that.openId }})
+          } else if (errorCode === 12) {
+            // openId不存在
+            that.$router.push({path: '/404'})
+          } else {
+            that.errorMessage = error.response.data.message
+          }
+        }
+      })
     }
   }
 }

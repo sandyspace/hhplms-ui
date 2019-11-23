@@ -17,7 +17,7 @@
         <input type="text" name="vcode" placeholder="请输入短信证码" v-model="user.vcode" maxlength="6" />
         <div>
           <div v-if="sending" class="count-down" style="color: white">{{ countSecond }}s后重新发送</div>
-          <div v-else class="send-btn" style="color: white" @click="sendSms">发送验证码</div>
+          <div v-else class="send-btn" style="color: white" @click="handleSendClick">发送验证码</div>
         </div>
        </div>
        <div class="form_item">
@@ -67,7 +67,7 @@ export default {
       var mobile = this.user.mobile
 	    var userpw1 = this.user.userpw1
       var userpw2 = this.user.userpw2
-      var vcode = this.user.email
+      var vcode = this.user.vcode
       
       if(mobile == ''){
         this.errorMessage = '请输入手机号码'
@@ -103,34 +103,34 @@ export default {
       }
 
       this.$http.post('/api/auth/account/register', {
+        'dynamicCode': vcode,
         'mobile': mobile,
-        'password': userpw1
+        'password': userpw1,
       })
       .then(response => {
-        console.log(response)
         this.success=true
       })
       .catch(error => {
-        console.log(error.response)
         if (!!error.response) {
           this.errorMessage = error.response.data.message
         }
       })
     },
-    sendSms() {
-      var mobile = this.user.mobile
-      if(mobile == ''){
-        this.errorMessage = '请输入手机号码'
-        return false;
-      }
-      if(!this.G.isPoneAvailable(mobile)){
-        this.errorMessage = '请输入有效的手机号码'
-        return false;
-      }
-
+    handleSendClick () {
       var that = this
+      var mobile = that.user.mobile
+      if(mobile == ''){
+        that.errorMessage = '请输入手机号码'
+        return false;
+      }
+      if(!that.G.isPoneAvailable(mobile)){
+        that.errorMessage = '请输入有效的手机号码'
+        return false;
+      }
       that.sending = true
       that.countSecond = 60
+      // 发送请求
+      that.sendSmsReqeust(mobile)
       that.sendingInterval = setInterval(() => {
         that.countSecond = that.countSecond - 1
         console.log( that.countSecond )
@@ -139,6 +139,23 @@ export default {
           clearInterval(that.sendingInterval)
         }
       }, 1000);
+    },
+    // 发送获取验证码请求
+    sendSmsReqeust (mobile) {
+      var that = this
+      that.$http.post('/api/sys/dynamicCodes/retrieve', {
+        'mobile': mobile
+      })
+      .then(res => {
+        console.log(res)
+      })
+      .catch(error => {
+        that.sending = false
+        clearInterval(that.sendingInterval)
+        if (!!error.response) {
+          that.errorMessage = error.response.data.message
+        }
+      })
     }
   }
 }

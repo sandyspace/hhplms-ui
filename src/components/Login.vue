@@ -21,10 +21,10 @@
                 <span class="zc_zh">没有账号?<router-link to="/register"><a>立即注册</a></router-link></span>
               </div>
               <div v-if="openId" class="form_item wx_login">
-                <a :to="{path: '/openIdBack', query: {openId : openId}}"><div class="box"><span></span></div><p>微信快速登陆</p></a>
+                <a @click="toWxLogin"><div class="box"><span></span></div><p>微信快速登录</p></a>
               </div>
               <div v-if="wxAuthRequestUrl" class="form_item wx_login">
-                <a :href="wxAuthRequestUrl"><div class="box"><span></span></div><p>微信快速登陆</p></a>
+                <a :href="wxAuthRequestUrl"><div class="box"><span></span></div><p>微信快速登录</p></a>
               </div>
           </form>
         </div>
@@ -100,6 +100,10 @@ export default {
           this.errorMessage = error.response.data.message
         }
       })
+    },
+    // 重定向到微信登录页面
+    toWxLogin () {
+      this.$router.push({path: '/OpenIdBack', query: {openId : this.openId}})
     }
   }
 }

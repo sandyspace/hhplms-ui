@@ -6,7 +6,7 @@
      <div class="tu9-wrapper clear">
 
       <div v-if="success" class="form_item zc-cg-box">
-       <span class="zc_zh">已注册成功，返回<router-link to="/login"><a>登录</a></router-link>页面</span>
+       <span class="zc_zh">密码修改成功，返回<router-link to="/login"><a>登录</a></router-link>页面</span>
       </div>
       <form v-else action="" class="submitForm">
        <div class="error-msg">{{errorMessage}}</div>
@@ -17,7 +17,7 @@
         <input type="text" name="vcode" placeholder="请输入短信证码" v-model="user.vcode" maxlength="6" />
         <div>
           <div v-if="sending" class="count-down" style="color: white">{{ countSecond }}s后重新发送</div>
-          <div v-else class="send-btn" style="color: white" @click="sendSms">发送验证码</div>
+          <div v-else class="send-btn" style="color: white" @click="handleSendClick">发送验证码</div>
         </div>
        </div>
        <div class="form_item">
@@ -27,7 +27,7 @@
         <input type="password" name="userpw2" placeholder="请确认密码" v-model="user.userpw2" maxlength="20" />
        </div>
        <div class="form_item" style="margin:0">
-        <div class="submit-btn" @click="changePassword">提交</div>
+        <div class="submit-btn" @click="handleSubmit">提交</div>
        </div>
        <div class="form_item">
         <span class="zc_zh">如果已有账号，点击<router-link to="/login"><a>立即登录</a></router-link></span>
@@ -62,12 +62,12 @@ export default {
   },
   mounted: function () {},
   methods: {
-    changePassword: function () {
+    handleSubmit: function () {
       this.errorMessage = ''
       var mobile = this.user.mobile
 	    var userpw1 = this.user.userpw1
       var userpw2 = this.user.userpw2
-      var vcode = this.user.email
+      var vcode = this.user.vcode
       
       if(mobile == ''){
         this.errorMessage = '请输入手机号码'
@@ -101,44 +101,66 @@ export default {
         this.errorMessage = '两次输入密码不一致'
         return false;
       }
-
-      this.$http.post('/api/auth/account/modify', {
-        'mobile': mobile,
-        'password': userpw1
-      })
-      .then(response => {
-        console.log(response)
-        this.success=true
-      })
-      .catch(error => {
-        console.log(error.response)
-        if (!!error.response) {
-          this.errorMessage = error.response.data.message
-        }
-      })
+      // 发送修改密码请求
+      this.changePwdRequest()
     },
-    sendSms() {
-      var mobile = this.user.mobile
-      if(mobile == ''){
-        this.errorMessage = '请输入手机号码'
-        return false;
-      }
-      if(!this.G.isPoneAvailable(mobile)){
-        this.errorMessage = '请输入有效的手机号码'
-        return false;
-      }
-
+    handleSendClick () {
       var that = this
+      var mobile = that.user.mobile
+      if(mobile == ''){
+        that.errorMessage = '请输入手机号码'
+        return false;
+      }
+      if(!that.G.isPoneAvailable(mobile)){
+        that.errorMessage = '请输入有效的手机号码'
+        return false;
+      }
       that.sending = true
       that.countSecond = 60
+      // 发送请求
+      that.sendSmsReqeust(mobile)
       that.sendingInterval = setInterval(() => {
         that.countSecond = that.countSecond - 1
-        console.log( that.countSecond )
         if(that.countSecond === 0){
           that.sending = false
           clearInterval(that.sendingInterval)
         }
       }, 1000);
+    },
+    // 发送获取验证码请求
+    sendSmsReqeust (mobile) {
+      var that = this
+      that.$http.post('/api/sys/dynamicCodes/retrieve', {
+        'mobile': mobile
+      })
+      .then(res => {
+        console.log(res)
+      })
+      .catch(error => {
+        that.sending = false
+        clearInterval(that.sendingInterval)
+        if (!!error.response) {
+          that.errorMessage = error.response.data.message
+        }
+      })
+    },
+    // 发送修改密码请求
+    changePwdRequest () {
+      var that = this
+      that.$http.post('/api/auth/account/pwd/setting', {
+        'dynamicCode': this.user.vcode,
+        'mobile': this.user.mobile,
+        'password': this.user.userpw1
+      })
+      .then(res => {
+        that.success = true
+      })
+      .catch(error => {
+        that.success = false
+        if (!!error.response) {
+          that.errorMessage = error.response.data.message
+        }
+      })
     }
   }
 }
