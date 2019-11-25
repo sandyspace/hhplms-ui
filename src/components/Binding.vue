@@ -11,10 +11,10 @@
       <form v-else action="" class="submitForm">
        <div class="error-msg">{{errorMessage}}</div>
        <div class="form_item">
-        <input type="text" name="mobile" placeholder="请输入手机号" v-model="user.mobile" maxlength="11" />
+        <input type="text" name="mobile" placeholder="请输入手机号" v-model="user.mobile" maxlength="11" @blur="blurs"/>
        </div>
        <div class="form_item verification">
-        <input type="text" name="vcode" placeholder="请输入短信证码" v-model="user.vcode" maxlength="6" />
+        <input type="text" name="vcode" placeholder="请输入短信证码" v-model="user.vcode" maxlength="6" @blur="blurs"/>
         <div>
           <div v-if="sending" class="count-down" style="color: white">{{ countSecond }}s后重新发送</div>
           <div v-else class="send-btn" style="color: white" @click="handleSendClick">发送验证码</div>
@@ -59,6 +59,10 @@ export default {
     }
   },
   methods: {
+    // 防止input点击软键盘后背景上移问题
+    blurs(){
+			window.scroll(0, 0)
+		},
     handleSubmit() {
       this.errorMessage = ''
       var mobile = this.user.mobile
@@ -181,7 +185,6 @@ export default {
       font-size: 15px;
       text-align: left;
       padding-left: 32px;
-      width: 96%;
       margin: 0px auto 20px;
     }
 

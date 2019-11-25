@@ -11,20 +11,20 @@
       <form v-else action="" class="submitForm">
        <div class="error-msg">{{errorMessage}}</div>
        <div class="form_item">
-        <input type="text" name="mobile" placeholder="请输入手机号" v-model="user.mobile" maxlength="11" />
+        <input type="text" name="mobile" placeholder="请输入手机号" v-model="user.mobile" maxlength="11" @blur="blurs"/>
        </div>
        <div class="form_item verification">
-        <input type="text" name="vcode" placeholder="请输入短信证码" v-model="user.vcode" maxlength="6" />
+        <input type="text" name="vcode" placeholder="请输入短信证码" v-model="user.vcode" maxlength="6" @blur="blurs"/>
         <div>
           <div v-if="sending" class="count-down" style="color: white">{{ countSecond }}s后重新发送</div>
           <div v-else class="send-btn" style="color: white" @click="handleSendClick">发送验证码</div>
         </div>
        </div>
        <div class="form_item">
-        <input type="password" name="userpw1" placeholder="请输入密码" v-model="user.userpw1" maxlength="20" />
+        <input type="password" name="userpw1" placeholder="请输入密码" v-model="user.userpw1" maxlength="20" @blur="blurs"/>
        </div>
        <div class="form_item">
-        <input type="password" name="userpw2" placeholder="请确认密码" v-model="user.userpw2" maxlength="20" />
+        <input type="password" name="userpw2" placeholder="请确认密码" v-model="user.userpw2" maxlength="20" @blur="blurs"/>
        </div>
        <div class="form_item" style="margin:0">
         <div class="submit-btn" @click="handleSubmit">提交</div>
@@ -62,6 +62,10 @@ export default {
   },
   mounted: function () {},
   methods: {
+    // 防止input点击软键盘后背景上移问题
+    blurs(){
+			window.scroll(0, 0)
+		},
     handleSubmit: function () {
       this.errorMessage = ''
       var mobile = this.user.mobile

@@ -8,10 +8,10 @@
             <div class="error-msg">{{errorMessage}}</div>
               <input type="hidden" name="placeholder">
               <div class="form_item">
-                <input type="text" name="name" placeholder="手机号" v-model="user.username" maxlength="50">
+                <input type="text" name="name" placeholder="手机号" v-model="user.username" maxlength="50" @blur="blurs">
               </div>
               <div class="form_item">
-                <input type="password" name="userpw" placeholder="密码" v-model="user.password" maxlength="20">
+                <input type="password" name="userpw" placeholder="密码" v-model="user.password" maxlength="20" @blur="blurs">
               </div>
               <div class="form_item">
                 <span class="submit-btn" @click="login">提交</span>
@@ -72,6 +72,10 @@ export default {
     }
   },
   methods: {
+    // 防止input点击软键盘后背景上移问题
+    blurs(){
+			window.scroll(0, 0)
+		},
     login: function () {
       this.errorMessage = ''
       var username = this.user.username
@@ -118,6 +122,7 @@ export default {
       padding-top: 30px !important;
       a{
         display: inline-block;
+        text-decoration: none;
       }
       .box{
         display: inline-flex;
@@ -129,7 +134,7 @@ export default {
           height: 60px;
           display: inline-block;
           background: url(../../static/images/icon2.png) no-repeat;
-          background-position-y: -61px;
+          background-size: 60px;
         }
       }
       p{
