@@ -20,10 +20,10 @@
                 <span class="zc_zh" style="float: right;"><router-link to="/changePassword"><a>找回密码</a></router-link></span>
                 <span class="zc_zh">没有账号?<router-link to="/register"><a>立即注册</a></router-link></span>
               </div>
-              <div v-if="openId" class="form_item wx_login">
+              <div v-if="openId" class="form_item wx_login" style="padding-bottom:25px;margin-bottom: 0;">
                 <a @click="toWxLogin"><div class="box"><span></span></div><p>微信快速登录</p></a>
               </div>
-              <div v-if="wxAuthRequestUrl" class="form_item wx_login">
+              <div v-if="wxAuthRequestUrl" class="form_item wx_login" style="padding-bottom:25px;margin-bottom: 0;">
                 <a :href="wxAuthRequestUrl"><div class="box"><span></span></div><p>微信快速登录</p></a>
               </div>
           </form>
@@ -114,9 +114,10 @@ export default {
 </script>
 <style lang="less" scoped>
   .index-wrap{
-    height: 100%;
+    height: auto !important;
     background: url(../../static/images/login_bj.png) no-repeat;
     background-size: 100% 100%;
+    min-height: 100%;
     .wx_login{
       text-align: center !important;
       padding-top: 30px !important;
@@ -166,6 +167,7 @@ export default {
 
     .section{
       overflow: initial;
+      height: 100%;
     }
     .balloon {
         opacity: 1;

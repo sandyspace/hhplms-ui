@@ -176,10 +176,10 @@ export default {
 </script>
 <style lang="less" scoped>
   .register-wrap{
-    height: 100%;
+    height: auto !important;
     background: url(../../static/images/login_bj.png) no-repeat;
     background-size: 100% 100%;
-
+    min-height: 100%;
     .error-msg{
       color: #fff;
       font-size: 15px;

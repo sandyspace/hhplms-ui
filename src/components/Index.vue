@@ -46,5 +46,6 @@ export default {
 .index-wrap > div a{
   color: #fff;
   text-decoration:none;
+  display: block;
 }
 </style>
