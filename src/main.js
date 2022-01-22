@@ -23,17 +23,17 @@ Vue.config.productionTip = false
 let currentHost = window.location.host
 let wxAppId = 'wx81199b5687028ca5' // 正式环境环境
 
-let currentRootUrl = 'https://www.iotecloud.com'
-if (currentHost === 'test.iotecloud.com') {
+let currentRootUrl = 'https://cssc.iotecloud.cn'
+if (currentHost === 'cssc-test.iotecloud.cn') {
   // 测试环境
-  currentRootUrl = 'http://test.iotecloud.com'
+  currentRootUrl = 'http://cssc-test.iotecloud.cn'
   wxAppId = 'wx9da6dba1a33b0c85'
 }
 
 // TODO 暂时使用的是服务器
 if (process.env.NODE_ENV === 'development') {
   // 测试环境
-  currentRootUrl = 'http://test.iotecloud.com'
+  currentRootUrl = 'http://cssc-test.iotecloud.cn'
   wxAppId = 'wx9da6dba1a33b0c85'
 }
 let currentImageUrl = currentRootUrl + '/client/cbgj/upload'
